@@ -27,7 +27,7 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
             </div>
         </div>
             <div class="row index-section__content mt-4">
-                <?$APPLICATION->IncludeComponent("bitrix:news.list","contacts_office",Array(
+                <?$APPLICATION->IncludeComponent("growtag:news.list","contacts_office",Array(
                         "DISPLAY_DATE" => "Y",
                         "DISPLAY_NAME" => "Y",
                         "DISPLAY_PICTURE" => "Y",
@@ -98,7 +98,7 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
             </div>
         </div>
         <div class="row index-section__content mt-4">
-            <?$APPLICATION->IncludeComponent("bitrix:news.list","contacts_dept",Array(
+            <?$APPLICATION->IncludeComponent("growtag:news.list","contacts_dept",Array(
                     "DISPLAY_DATE" => "Y",
                     "DISPLAY_NAME" => "Y",
                     "DISPLAY_PICTURE" => "Y",
@@ -156,34 +156,21 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
         </div>
     </div>
 </section>
-<section class="index-section-7 contacts-section-3">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="index-section-7__text col-md-6">
-                <div class="index-section-7__title">
-                    <span>Мы на связи</span>
-                    Закажите расчет и мы свяжемся с вами в течение 30 минут
-                </div>
-            </div>
-            <div class="index-section-7__form col-md-6 p-5">
-                <?$APPLICATION->IncludeComponent(
-                    "growtag:main.feedback",
-                    "peshta_about_index",
-                    Array(
-                        "COMPONENT_TEMPLATE" => "peshta_about_index",
-                        "EMAIL_TO" => "",
-                        "EVENT_MESSAGE_ID" => array(0=>"26",),
-                        "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
-                        "REQUIRED_FIELDS" => array(0=>"NAME",),
-                        "USER_CONSENT" => "N",
-                        "USER_CONSENT_ID" => "0",
-                        "USER_CONSENT_IS_CHECKED" => "Y",
-                        "USER_CONSENT_IS_LOADED" => "N",
-                        "USE_CAPTCHA" => "N"
-                    )
-                );?>
-            </div>
-        </div>
-    </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+    "growtag:main.feedback",
+    "peshta_about_index",
+    Array(
+        "TITLE_TEXT" => "Закажите расчет и мы свяжемся с вами в течение 30 минут",
+        "COMPONENT_TEMPLATE" => "peshta_about_index",
+        "EMAIL_TO" => "",
+        "EVENT_MESSAGE_ID" => array(0=>"26",),
+        "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
+        "REQUIRED_FIELDS" => array(0=>"NAME",),
+        "USER_CONSENT" => "N",
+        "USER_CONSENT_ID" => "0",
+        "USER_CONSENT_IS_CHECKED" => "Y",
+        "USER_CONSENT_IS_LOADED" => "N",
+        "USE_CAPTCHA" => "N"
+    )
+);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

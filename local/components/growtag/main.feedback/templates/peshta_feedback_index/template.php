@@ -44,28 +44,41 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
     <?
 }
 ?>
-<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
-    <?=bitrix_sessid_post()?>
-    <div class="index-section-7__form-input">
-        <label for="user_name">
-            <span><?=GetMessage("MFT_NAME")?></span>
-            <input required type="text" name="user_name" value="<?=$arResult["AUTHOR_NAME"]?>"/>
-        </label>
-        <label for="user_phone">
-            <span><?=GetMessage("MFT_PHONE")?></span>
-            <input required type="text" name="user_phone" value="<?=$arResult["AUTHOR_PHONE"]?>"/>
-        </label>
-        <label for="user_msg">
-            <span><?=GetMessage("MFT_EMAIL")?></span>
-            <input required type="text" name="user_email" value="<?=$arResult["AUTHOR_EMAIL"]?>"/>
-        </label>
+<section class="index-section-7 test-ticket">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="index-section-7__text col-md-6">
+                <div class="index-section-7__title">
+                    <?=$arParams["TITLE_TEXT"];?>
+                </div>
+            </div>
+            <div class="index-section-7__form col-md-6 p-5">
+                <form action="<?=POST_FORM_ACTION_URI?>" method="POST">
+                    <?=bitrix_sessid_post()?>
+                    <div class="index-section-7__form-input">
+                        <label for="user_name">
+                            <span><?=GetMessage("MFT_NAME")?></span>
+                            <input required type="text" name="user_name" value="<?=$arResult["AUTHOR_NAME"]?>"/>
+                        </label>
+                        <label for="user_phone">
+                            <span><?=GetMessage("MFT_PHONE")?></span>
+                            <input required type="text" name="user_phone" value="<?=$arResult["AUTHOR_PHONE"]?>"/>
+                        </label>
+                        <label for="user_msg">
+                            <span><?=GetMessage("MFT_EMAIL")?></span>
+                            <input required type="text" name="user_email" value="<?=$arResult["AUTHOR_EMAIL"]?>"/>
+                        </label>
+                    </div>
+                    <div class="index-section-7__form-privacy">
+                        <input required type="checkbox" checked> Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="/privacy/">политикой конфиденциальности</a>
+                    </div>
+                    <div class="index-section-7__form-button mt-4">
+                        <input type="hidden" name="recaptcha_response" id="recaptchaResponse-settlement-index">
+                        <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
+                        <input title="Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности." <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> type="submit" name="submit" value="Оставить заявку" class="red-button form-button"/>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="index-section-7__form-privacy">
-        <input required type="checkbox" checked> Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="/privacy/">политикой конфиденциальности</a>
-    </div>
-    <div class="index-section-7__form-button mt-4">
-        <input type="hidden" name="recaptcha_response" id="recaptchaResponse-settlement-index">
-        <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
-        <input title="Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности." <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> type="submit" name="submit" value="Оставить заявку" class="red-button form-button"/>
-    </div>
-</form>
+</section>

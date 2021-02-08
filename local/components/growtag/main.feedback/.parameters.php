@@ -14,41 +14,53 @@ while($arType = $dbType->GetNext())
 $arComponentParameters = array(
 	"PARAMETERS" => array(
         "USER_CONSENT" => array(),
-		"USE_CAPTCHA" => Array(
-			"NAME" => GetMessage("MFP_CAPTCHA"), 
+		/*"USE_CAPTCHA" => Array(
+			"NAME" => GetMessage("MFP_CAPTCHA"),
 			"TYPE" => "CHECKBOX",
-			"DEFAULT" => "Y", 
+			"DEFAULT" => "Y",
 			"PARENT" => "BASE",
-		),
+		),*/
+        "TITLE_TEXT" => Array(
+            "NAME" => "Текст заголовка блока",
+            "TYPE" => "STRING",
+            "DEFAULT" => "Заголовок",
+            "PARENT" => "BASE",
+        ),
+        "DESC_TEXT" => Array(
+            "NAME" => "Текст подзаголовка блока",
+            "TYPE" => "STRING",
+            "DEFAULT" => "Подзаголовок",
+            "PARENT" => "BASE",
+        ),
 		"OK_TEXT" => Array(
-			"NAME" => GetMessage("MFP_OK_MESSAGE"), 
+			"NAME" => GetMessage("MFP_OK_MESSAGE"),
 			"TYPE" => "STRING",
-			"DEFAULT" => GetMessage("MFP_OK_TEXT"), 
+			"DEFAULT" => GetMessage("MFP_OK_TEXT"),
 			"PARENT" => "BASE",
 		),
 		"EMAIL_TO" => Array(
-			"NAME" => GetMessage("MFP_EMAIL_TO"), 
+			"NAME" => GetMessage("MFP_EMAIL_TO"),
 			"TYPE" => "STRING",
-			"DEFAULT" => htmlspecialcharsbx(COption::GetOptionString("main", "email_from")), 
+			"DEFAULT" => htmlspecialcharsbx(COption::GetOptionString("main", "email_from")),
 			"PARENT" => "BASE",
 		),
 		"REQUIRED_FIELDS" => Array(
-			"NAME" => GetMessage("MFP_REQUIRED_FIELDS"), 
-			"TYPE"=>"LIST", 
-			"MULTIPLE"=>"Y", 
+			"NAME" => GetMessage("MFP_REQUIRED_FIELDS"),
+			"TYPE"=>"LIST",
+			"MULTIPLE"=>"Y",
 			"VALUES" => Array("NONE" => GetMessage("MFP_ALL_REQ"), "NAME" => GetMessage("MFP_NAME"), "EMAIL" => "E-mail", "MESSAGE" => GetMessage("MFP_MESSAGE")),
-			"DEFAULT"=>"", 
-			"COLS"=>25, 
+			"DEFAULT"=>"",
+			"COLS"=>25,
 			"PARENT" => "BASE",
 		),
 
 		"EVENT_MESSAGE_ID" => Array(
-			"NAME" => GetMessage("MFP_EMAIL_TEMPLATES"), 
-			"TYPE"=>"LIST", 
+			"NAME" => GetMessage("MFP_EMAIL_TEMPLATES"),
+			"TYPE"=>"LIST",
 			"VALUES" => $arEvent,
-			"DEFAULT"=>"", 
-			"MULTIPLE"=>"Y", 
-			"COLS"=>25, 
+			"DEFAULT"=>"",
+			"MULTIPLE"=>"Y",
+			"COLS"=>25,
 			"PARENT" => "BASE",
 		),
 
