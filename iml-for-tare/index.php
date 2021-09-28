@@ -3,9 +3,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Пешта");
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/style/slick.css">
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/style/slick-theme.css">
+<link href="<?=SITE_TEMPLATE_PATH?>/style/style-new.css" rel="stylesheet">
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/style/circle.css">
 <?$APPLICATION->IncludeComponent(
-	"growtag:news.detail", 
-	".default", 
+	"growtag:news.detail",
+	".default",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -246,7 +251,7 @@ $APPLICATION->SetTitle("Пешта");
         "SORT_ORDER1" => "DESC",
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N",
-        "TITLE_TEXT" => "Почему&nbsp;IML-технология&nbsp;повысит лояльность&nbsp;постоянных&nbsp;и&nbsp;привлечет новых&nbsp;клиентов",
+        "TITLE_TEXT" => "Почему IML-технология повысит лояльность постоянных и привлечет новых клиентов",
         "DESC_TEXT" => "Вплавляемая этикетка используется в пищевой промышленности, фармацевтике, при
                 производстве строительных материалов, удобрений, товаров для дома и сада. Это мощный
                 маркетинговый и рекламный инструмент, позволяющий упрочить позицию бренда, охватить
@@ -308,7 +313,7 @@ $APPLICATION->SetTitle("Пешта");
         "SORT_ORDER1" => "DESC",
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N",
-        "TITLE_TEXT" => "Какие&nbsp;преимущества&nbsp;дает&nbsp;вам&nbsp;использование IML-этикеток",
+        "TITLE_TEXT" => "Какие преимущества дает вам использование IML-этикеток",
     ),
     false
 );?>
@@ -433,6 +438,14 @@ $APPLICATION->SetTitle("Пешта");
     "growtag:main.feedback",
     "peshta_feedback_index",
     array(
+		"FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Заявка на тест или пробный заказ", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => 542, // ID типа покупателя
         "TITLE_TEXT" => "Оставьте заявку на тест или пробный заказ, и наш менеджер свяжется с вами в ближайшие 30
                     минут, чтобы уточнить детали",
         "DESC_TEXT" => "",
@@ -527,38 +540,73 @@ $APPLICATION->SetTitle("Пешта");
     ),
     false
 );?>
-<section class="index-section-9 euro-standart">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-6 p-0">
-                <div class="index-section__image d-flex">
-                    <div class="image-title d-flex">
-                        Почему крупные  производители продукции заказывают вплавляемые этикетки в типографии «ПЕШТА»
-                    </div>
-                    <img src="<?=SITE_TEMPLATE_PATH?>/images/softfresh2.png" alt="Soft&Fresh" style="width: 100%">
-                </div>
-            </div>
-            <div class="index-section__list col-md-6">
-                <div class="index-section__list-title">
-                    Европейское качество и стандарты производства
-                </div>
-                <ul>
-                    <li>Инвестируем в инновационное оборудование</li>
-                    <li>Приглашаем европейских инструкторов для обучения и повышения квалификации персонала</li>
-                    <li>Используем высококачественные расходные материалы</li>
-                    <li>Проводим регулярные аудиты и ревизии</li>
-                    <li>Внедрили систему сквозного контроля качества</li>
-                    <li>Закрепляем персонального менеджера</li>
-                    <li>Маркируем по вашим индивидуальным требованиям</li>
-                    <li>Отгружаем в крупные складские комплексы</li>
-                    <li>Предоставляем «личный кабинет» для хранения образцов, штампов, дизайнов, цветопроб</li>
-                    <li>Оказываем постоянную техническую и технологическую поддержку</li>
-                </ul>
-            </div>
-            <img class="index-section__image-mobile" src="<?=SITE_TEMPLATE_PATH?>/images/softfresh.png" alt="Soft&Fresh" style="width: 100%">
-        </div>
-    </div>
-</section>
+<?$APPLICATION->IncludeComponent(
+    "growtag:news.list",
+    "index_stand",
+    Array(
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "CACHE_TIME" => "36000000",
+        "CACHE_TYPE" => "A",
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "",
+        "DISPLAY_BOTTOM_PAGER" => "N",
+        "DISPLAY_DATE" => "Y",
+        "DISPLAY_NAME" => "Y",
+        "DISPLAY_PICTURE" => "Y",
+        "DISPLAY_PREVIEW_TEXT" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "FIELD_CODE" => array("",""),
+        "FILTER_NAME" => "",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "IBLOCK_ID" => "31",
+        "IBLOCK_TYPE" => "catalog",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "MEDIA_PROPERTY" => "",
+        "MESSAGE_404" => "",
+        "NEWS_COUNT" => "20",
+        "PAGER_BASE_LINK_ENABLE" => "N",
+        "PAGER_DESC_NUMBERING" => "N",
+        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+        "PAGER_SHOW_ALL" => "N",
+        "PAGER_SHOW_ALWAYS" => "N",
+        "PAGER_TEMPLATE" => ".default",
+        "PAGER_TITLE" => "Каталог",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "PROPERTY_CODE" => array(
+            0 => "PICTURES",
+        ),
+        "SEARCH_PAGE" => "/search/",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_STATUS_404" => "N",
+        "SET_TITLE" => "N",
+        "SHOW_404" => "N",
+        "SLIDER_PROPERTY" => "",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER1" => "DESC",
+        "SORT_ORDER2" => "ASC",
+        "STRICT_SECTION_CHECK" => "Y",
+        "TEMPLATE_THEME" => "blue",
+        "USE_RATING" => "N",
+        "USE_SHARE" => "N",
+        "TITLE_TEXT" => "Европейское качество и стандарты производства",
+        "DESC_TEXT" => "Почему крупные  производители продукции заказывают вплавляемые этикетки в типографии «ПЕШТА»"
+    )
+);?>
 <section class="index-section-11">
     <div class="container">
         <div class="row justify-content-center">
@@ -589,7 +637,7 @@ $APPLICATION->SetTitle("Пешта");
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <a href="#" data-toggle="modal" data-target="#modalUpakovka" class="red-button">Оставить заявку</a>
+            <a href="#" data-toggle="modal" data-target="#modalUpakovka" class="red-button" style="width: auto">Оставить заявку</a>
         </div>
     </div>
 </section>
@@ -663,6 +711,14 @@ $APPLICATION->SetTitle("Пешта");
     "growtag:main.feedback",
     "peshta_feedback_footer",
     array(
+		"FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Заявка на подборку примеров работ", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => 542, // ID типа покупателя
         "TITLE_TEXT" => "Хотите увидеть примеры работ в вашем бизнес-сегменте?",
         "DESC_TEXT" => "Подберем и вышлем на адрес вашей электронной почты!",
         "USE_CAPTCHA" => "N",

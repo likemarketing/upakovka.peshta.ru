@@ -5,172 +5,139 @@ $APPLICATION->SetPageProperty("keywords", "типография, ижевск, �
 $APPLICATION->SetPageProperty("title", "ПЕШТА - Контакты");
 $APPLICATION->SetTitle("Контакты");
 $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APPLICATION->GetCurPage());
-?>
-<section class="index-section-1 contacts-section-1">
-    <div class="index-slider">
-        <div class="container p-0">
-            <div class="row">
-                <div class="col-md-7">
-                    <div class="slide-title">
-                        <h1>Контакты</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="index-section-5 contacts-section-2">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="index-section__title">
-                <h2>Офис, производство и представительство</h2>
-            </div>
-        </div>
-            <div class="row index-section__content mt-4">
-                <?$APPLICATION->IncludeComponent("growtag:news.list","contacts_office",Array(
-                        "DISPLAY_DATE" => "Y",
-                        "DISPLAY_NAME" => "Y",
-                        "DISPLAY_PICTURE" => "Y",
-                        "DISPLAY_PREVIEW_TEXT" => "Y",
-                        "AJAX_MODE" => "Y",
-                        "IBLOCK_TYPE" => "news",
-                        "IBLOCK_ID" => "22",
-                        "NEWS_COUNT" => "200",
-                        "SORT_BY1" => "ACTIVE_FROM",
-                        "SORT_ORDER1" => "DESC",
-                        "SORT_BY2" => "SORT",
-                        "SORT_ORDER2" => "ASC",
-                        "FILTER_NAME" => "",
-                        "FIELD_CODE" => Array("ID"),
-                        "PROPERTY_CODE" => Array("MAP","EMAIL","PHONES","TIME"),
-                        "CHECK_DATES" => "Y",
-                        "DETAIL_URL" => "",
-                        "PREVIEW_TRUNCATE_LEN" => "",
-                        "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                        "SET_TITLE" => "N",
-                        "SET_BROWSER_TITLE" => "N",
-                        "SET_META_KEYWORDS" => "N",
-                        "SET_META_DESCRIPTION" => "N",
-                        "SET_LAST_MODIFIED" => "Y",
-                        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                        "ADD_SECTIONS_CHAIN" => "Y",
-                        "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-                        "PARENT_SECTION" => "",
-                        "PARENT_SECTION_CODE" => "",
-                        "INCLUDE_SUBSECTIONS" => "Y",
-                        "CACHE_TYPE" => "N",
-                        "CACHE_TIME" => "3600",
-                        "CACHE_FILTER" => "Y",
-                        "CACHE_GROUPS" => "Y",
-                        "DISPLAY_TOP_PAGER" => "N",
-                        "DISPLAY_BOTTOM_PAGER" => "N",
-                        "PAGER_TITLE" => "Новости",
-                        "PAGER_SHOW_ALWAYS" => "N",
-                        "PAGER_TEMPLATE" => "",
-                        "PAGER_DESC_NUMBERING" => "Y",
-                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                        "PAGER_SHOW_ALL" => "N",
-                        "PAGER_BASE_LINK_ENABLE" => "Y",
-                        "SET_STATUS_404" => "N",
-                        "SHOW_404" => "N",
-                        "MESSAGE_404" => "",
-                        "PAGER_BASE_LINK" => "",
-                        "PAGER_PARAMS_NAME" => "arrPager",
-                        "AJAX_OPTION_JUMP" => "N",
-                        "AJAX_OPTION_STYLE" => "Y",
-                        "AJAX_OPTION_HISTORY" => "N",
-                        "AJAX_OPTION_ADDITIONAL" => ""
-                    )
-                );?>
-        </div>
-    </div>
-</section>
-<section class="index-section-5 contacts-section-2 pt-0">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="index-section__title">
-                <h2>Департаменты и отделы компании</h2>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="index-section__description">
-                Работа с ключевыми клиентами
-            </div>
-        </div>
-        <div class="row index-section__content mt-4">
-            <?$APPLICATION->IncludeComponent("growtag:news.list","contacts_dept",Array(
-                    "DISPLAY_DATE" => "Y",
-                    "DISPLAY_NAME" => "Y",
-                    "DISPLAY_PICTURE" => "Y",
-                    "DISPLAY_PREVIEW_TEXT" => "Y",
-                    "AJAX_MODE" => "Y",
-                    "IBLOCK_TYPE" => "news",
-                    "IBLOCK_ID" => "23",
-                    "NEWS_COUNT" => "200",
-                    "SORT_BY1" => "ACTIVE_FROM",
-                    "SORT_ORDER1" => "DESC",
-                    "SORT_BY2" => "SORT",
-                    "SORT_ORDER2" => "ASC",
-                    "FILTER_NAME" => "",
-                    "FIELD_CODE" => Array("ID"),
-                    "PROPERTY_CODE" => Array("POSITION","EMAIL","PHONE"),
-                    "CHECK_DATES" => "Y",
-                    "DETAIL_URL" => "",
-                    "PREVIEW_TRUNCATE_LEN" => "",
-                    "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                    "SET_TITLE" => "N",
-                    "SET_BROWSER_TITLE" => "N",
-                    "SET_META_KEYWORDS" => "N",
-                    "SET_META_DESCRIPTION" => "N",
-                    "SET_LAST_MODIFIED" => "Y",
-                    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-                    "ADD_SECTIONS_CHAIN" => "Y",
-                    "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-                    "PARENT_SECTION" => "",
-                    "PARENT_SECTION_CODE" => "",
-                    "INCLUDE_SUBSECTIONS" => "Y",
-                    "CACHE_TYPE" => "N",
-                    "CACHE_TIME" => "3600",
-                    "CACHE_FILTER" => "Y",
-                    "CACHE_GROUPS" => "Y",
-                    "DISPLAY_TOP_PAGER" => "N",
-                    "DISPLAY_BOTTOM_PAGER" => "N",
-                    "PAGER_TITLE" => "Новости",
-                    "PAGER_SHOW_ALWAYS" => "N",
-                    "PAGER_TEMPLATE" => "",
-                    "PAGER_DESC_NUMBERING" => "Y",
-                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-                    "PAGER_SHOW_ALL" => "N",
-                    "PAGER_BASE_LINK_ENABLE" => "Y",
-                    "SET_STATUS_404" => "N",
-                    "SHOW_404" => "N",
-                    "MESSAGE_404" => "",
-                    "PAGER_BASE_LINK" => "",
-                    "PAGER_PARAMS_NAME" => "arrPager",
-                    "AJAX_OPTION_JUMP" => "N",
-                    "AJAX_OPTION_STYLE" => "Y",
-                    "AJAX_OPTION_HISTORY" => "N",
-                    "AJAX_OPTION_ADDITIONAL" => ""
-                )
-            );?>
-        </div>
-    </div>
-</section>
-<?$APPLICATION->IncludeComponent(
-    "growtag:main.feedback",
-    "peshta_about_index",
-    Array(
-        "TITLE_TEXT" => "Закажите расчет и мы свяжемся с вами в течение 30 минут",
-        "COMPONENT_TEMPLATE" => "peshta_about_index",
-        "EMAIL_TO" => "",
-        "EVENT_MESSAGE_ID" => array(0=>"26",),
-        "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
-        "REQUIRED_FIELDS" => array(0=>"NAME",),
-        "USER_CONSENT" => "N",
-        "USER_CONSENT_ID" => "0",
-        "USER_CONSENT_IS_CHECKED" => "Y",
-        "USER_CONSENT_IS_LOADED" => "N",
-        "USE_CAPTCHA" => "N"
-    )
-);?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><div class="uk-container uk-container-large">
+	<h2 class="padding-mobile">Контакты</h2>
+	<div uk-grid="">
+		<div class="uk-width-1-3@s">
+			<h4>Приемная</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small">
+ <a href="tel:+7 (3412) 32-56-12" class="uk-text-small">
+					+7 (3412) 32-56-12 </a>
+				</div>
+				<div>
+ <a href="mailto:info@peshta.ru" class="uk-text-small">
+					info@peshta.ru </a>
+				</div>
+			</div>
+		</div>
+		<div class="uk-width-1-3@s">
+			<h4>Снабжение</h4>
+			<div class="gray_bg uk-padding-small uk-height-max-small">
+				<div class="uk-margin-small">
+ <a href="mailto:snab-ofset@peshta.ru" class="uk-text-small">
+					snab-ofset@peshta.ru </a>
+				</div>
+				<div class="uk-margin-small uk-visible@s">
+ <br>
+				</div>
+			</div>
+		</div>
+		<div class="uk-width-1-3@s">
+			<h4>Бухгалтерия</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small">
+ <a href="tel:+7 (3412) 32-56-12" class="uk-text-small">
+					+7 (3412) 32-56-12, доб. 111 </a>
+				</div>
+				<div class="uk-margin-small uk-visible@s">
+ <br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3>Специалисты по работе с ключевыми клиентами</h3>
+	<div uk-grid="">
+		<div class="uk-width-1-3@s">
+			<h4>Лариса Филимонова</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small">
+ <a href="tel:+7 (3412) 32-56-12" class="uk-text-small">
+					+7 (3412) 65-55-72 </a>
+				</div>
+				<div>
+ <a href="mailto:lushnikova@peshta.ru" class="uk-text-small">
+					m1@peshta.ru </a>
+				</div>
+			</div>
+		</div>
+		<div class="uk-width-1-3@s">
+			<h4>Марина Богданова</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small">
+ <a href="tel:+7 (3412) 32-56-12" class="uk-text-small">
+					+7 (3412) 65-55-72 </a>
+				</div>
+				<div>
+ <a href="mailto:fedorova@peshta.ru" class="uk-text-small">
+					m2@peshta.ru </a>
+				</div>
+			</div>
+		</div>
+		<div class="uk-width-1-3@s">
+			<h4>Айгуль Аминева</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small">
+ <a href="tel:+7 (3412) 32-56-12" class="uk-text-small">
+					+7 (3412) 65-55-72 </a>
+				</div>
+				<div>
+ <a href="mailto:drozdova@peshta.ru" class="uk-text-small">
+					m3@peshta.ru </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3>Руководитель департамента продаж ролевой печати</h3>
+	<div uk-grid="">
+		<div class="uk-width-1-3@s">
+			<h4>Бусыгин Алексей</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small">
+ <a href="tel:+7 (3412) 32-56-12" class="uk-text-small">
+					+7 (3412) 65-55-72 </a>
+				</div>
+				<div>
+ <a href="mailto:gordeeva@peshta.ru" class="uk-text-small">
+					busygin@peshta.ru </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2>Где мы находимся</h2>
+	<div uk-grid="">
+		<div class="uk-width-2-3@s">
+			<h4>Карта</h4>
+			<div class="maps" id="address-pehta-map">
+				 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A15824af480b85e803420c82a5fe3a3ebba5f233a6e791bad5e7236361d788932&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
+		</div>
+		<div class="uk-width-1-3@s">
+			<h4>Адрес</h4>
+			<div class="gray_bg uk-padding-small">
+				<div class="uk-margin-small-bottom">
+					 г. Ижевск, ул. Маяковского, 18
+				</div>
+				<div>
+					 ПН – ПТ с 09:00 до 18:00
+				</div>
+			</div>
+			<h4>Социальные сети</h4>
+			<div class="gray_bg uk-padding-small uk-margin-medium-bottom">
+				<div class="uk-margin-small-bottom">
+ <a href="" class="uk-text-small gray_color">
+					vk.com/peshta_izhevsk </a>
+				</div>
+				<div class="uk-margin-small-bottom">
+ <a href="" class="uk-text-small gray_color">
+					facebook.com/peshta_izhevsk </a>
+				</div>
+				<div>
+ <a href="" class="uk-text-small gray_color">
+					instagram.com/tipografia_peshta </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

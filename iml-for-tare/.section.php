@@ -1,5 +1,5 @@
 <?
-$sSectionName = "IML-этикетки для производителей тары и упаковки";
+$sSectionName = "Производителям тары";
 $arDirProperties = array(
 
 );

@@ -41,6 +41,41 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
+	),
+	Array(
+		"Круговая этикетка", 
+		"/krugovaya-etiketka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гибкая упаковка", 
+		"/gibkaya-upakovka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Data-Matrix Code", 
+		"/data-matrix-code/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"SMART-Упаковка", 
+		"/smart-upakovka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Самоклеящаяся этикетка", 
+		"/samokleyashchayasya-etiketka/", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
 ?>

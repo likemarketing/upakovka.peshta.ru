@@ -33,9 +33,11 @@ Disallow: /*?bxajaxid=
 Disallow: /*&bxajaxid=
 Disallow: /*?view_result=
 Disallow: /*&view_result=
+Disallow: /*?
 Allow: /bitrix/components/
 Allow: /bitrix/cache/
 Allow: /bitrix/js/
 Allow: /bitrix/templates/
 Allow: /bitrix/panel/
 Host: www.upakovka.peshta.ru
+Sitemap: https://www.upakovka.peshta.ru/sitemap.xml

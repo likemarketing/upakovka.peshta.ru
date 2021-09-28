@@ -66,14 +66,14 @@ IncludeTemplateLangFile(__FILE__);
                         </div>
                         <div class="header-top-left-address">
                             <div>г. Ижевск, ул. Кирова, 113</div>
-                            <div>Пн. – Пт. с 09:00 до 20:00</div>
+                            <div>Пн. – Пт. с 09:00 до 18:00</div>
                         </div>
                     </div>
                     <div class="p-2 bd-highlight"><div class="header-top-right-mail"><a href="mailto:upakovka@peshta.ru"><i class="fas fa-envelope"></i> upakovka@peshta.ru</a></div></div>
                     <!--<div class="p-2 bd-highlight"><a href="/personal/" class="btn-gray"><i class="fas fa-user"></i> Кабинет</a></div>-->
                     <div class="p-2 bd-highlight">
                         <div class="header-top-tel">
-                            <a href="tel:+79226834883">+7 (922) 683-4883</a>
+                            <a href="tel:+73412655572">+7 (3412) 65-55-72</a>
                         </div>
                         <div class="header-top-call">
                             <a href="#" data-target="#modalUpakovka" data-toggle="modal">Заказать звонок</a>
@@ -181,7 +181,7 @@ IncludeTemplateLangFile(__FILE__);
         <button type="submit"></button>
     </form>
     <div class="mobile-call">
-        <a href="tel:+73412400200" class="mobile-call__telephone">+7 (3412) 400-200</a>
+        <a href="tel:+73412655572" class="mobile-call__telephone">+7 (3412) 65-55-72</a>
         <a href="#" data-target="#modalUpakovka" data-toggle="modal" class="mobile-call__callback">Заказать звонок</a>
     </div>
     <hr/>

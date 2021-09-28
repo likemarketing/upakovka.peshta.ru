@@ -12,7 +12,7 @@
                     Пн. – Пт. с 09:00 до 18:00
                 </div>
                 <div class="footer-phone mt-4">
-                    <a href="tel:+79226834883">+7 (922) 683-4883</a>
+                    <a href="tel:+73412655572">+7 (3412) 65-55-72</a>
                 </div>
                 <a href="#" data-target="#modalUpakovka" data-toggle="modal">Заказать звонок</a>
             </div>
@@ -73,10 +73,19 @@
         </div>
     </div>
 </footer>
-<?$APPLICATION->IncludeComponent(
+<?
+$APPLICATION->IncludeComponent(
     "growtag:main.feedback",
     "peshta_callback_modal",
     array(
+		"FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Заявка на тест или пробный заказ (Модальное окно)", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => "", // ID типа покупателя
         "USE_CAPTCHA" => "N",
         "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
         "EMAIL_TO" => "",
@@ -93,11 +102,20 @@
         "USER_CONSENT_IS_LOADED" => "N"
     ),
     false
-);?>
-<?$APPLICATION->IncludeComponent(
+);
+
+$APPLICATION->IncludeComponent(
     "growtag:main.feedback",
     "peshta_settlement_modal",
     array(
+		"FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Заявка на тест или пробный заказ (Модальное окно)", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => "", // ID типа покупателя
         "USE_CAPTCHA" => "N",
         "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
         "EMAIL_TO" => "",
@@ -114,11 +132,20 @@
         "USER_CONSENT_IS_LOADED" => "N"
     ),
     false
-);?>
-<?$APPLICATION->IncludeComponent(
+);
+
+$APPLICATION->IncludeComponent(
     "growtag:main.feedback",
     "peshta_upakovka_modal",
     array(
+		"FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Заявка на тест или пробный заказ (Модальное окно)", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => "", // ID типа покупателя
         "USE_CAPTCHA" => "N",
         "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
         "EMAIL_TO" => "",

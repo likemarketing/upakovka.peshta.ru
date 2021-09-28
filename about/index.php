@@ -6,6 +6,11 @@ $APPLICATION->SetPageProperty("title", "ПЕШТА - О компании");
 $APPLICATION->SetTitle("О нас");
 $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APPLICATION->GetCurPage());
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/style/slick.css">
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/style/slick-theme.css">
+<link href="<?=SITE_TEMPLATE_PATH?>/style/style-new.css" rel="stylesheet">
+<link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/style/circle.css">
 <section class="index-section-1 about-section-1">
     <div class="index-slider">
         <div class="container p-0">
@@ -387,6 +392,14 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
     "growtag:main.feedback",
     "peshta_about_index",
     Array(
+		"FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Заявка на расчет (Страница - О компании)", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => "", // ID типа покупателя
         "TITLE_TEXT" => "Закажите расчет и мы свяжемся с вами в течение 30 минут",
         "COMPONENT_TEMPLATE" => "peshta_about_index",
         "EMAIL_TO" => "",

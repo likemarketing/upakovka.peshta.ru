@@ -1,11 +1,19 @@
 <?php
 $arUrlRewrite=array (
+  5 => 
+  array (
+    'CONDITION' => '#^/blog/([^\\/]+)/([^\\/]+)/($|\\?.*)#',
+    'RULE' => 'ELEMENT_CODE=$2',
+    'ID' => '',
+    'PATH' => '/blog/detail.php',
+    'SORT' => 100,
+  ),
   2 => 
   array (
-    'CONDITION' => '#^/catalog/([^\\/]+)/($|\\?.*)#',
-    'RULE' => 'ID=$1',
+    'CONDITION' => '#^/industries/([^\\/]+)/($|\\?.*)#',
+    'RULE' => 'CODE=$1',
     'ID' => '',
-    'PATH' => '/catalog/detail.php',
+    'PATH' => '/industries/detail.php',
     'SORT' => 100,
   ),
   3 => 
@@ -14,6 +22,14 @@ $arUrlRewrite=array (
     'RULE' => 'ID=$1',
     'ID' => '',
     'PATH' => '/cases/detail.php',
+    'SORT' => 100,
+  ),
+  6 => 
+  array (
+    'CONDITION' => '#^/blog/([^\\/]+)/($|\\?.*)#',
+    'RULE' => 'ID=$1',
+    'ID' => '',
+    'PATH' => '/blog/section.php',
     'SORT' => 100,
   ),
   1 => 
