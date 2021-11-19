@@ -166,26 +166,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 
             CFile::Delete($fileId);
 
-            /**************************
-             * Владелец бренда (id свойства) - 540
-             * Изготовитель тары (id свойства) - 542
-             *************************/
-            $newLead = new B24Requester(
-                htmlspecialcharsbx($_POST["user_name"]), // Входящее имя пользователя
-                htmlspecialcharsbx($_POST["user_phone"]), // Входящий телефон пользователя
-                htmlspecialcharsbx($_POST["user_email"]), // Входящий email пользователя
-                array(
-                    "FROM" => $arParams["FROM"], // Источник сделки
-                    "FROM_FIELD_ID" => $arParams["FROM_FIELD_ID"], // ID пользовательского поля "Источник"
-                    "USERTYPE_FIELD_ID" => $arParams["USERTYPE_FIELD_ID"], // ID пользовательского поля "Тип покупателя"
-                    "TITLE" => $arParams["DEAL_TITLE"], // Название сделки
-                    "CATEGORY_ID" => $arParams["CATEGORY_ID"], // ID Направления (IML - 26)
-                    "ASSIGNED_BY_ID" => $arParams["ASSIGNED_BY_ID"], // ID ответственного пользователя
-                    "STAGE_ID" => $arParams["STAGE_ID"], // Стадия сделки
-                    "USERTYPE_FIELD_LIST_ID" => $arParams["USERTYPE_FIELD_LIST_ID"] // ID типа покупателя
-                )
-            );
-            $newLead->pushDeal();
+            try {
+                /**************************
+                 * Владелец бренда (id свойства) - 540
+                 * Изготовитель тары (id свойства) - 542
+                 *************************/
+                $newLead = new B24Requester(
+                    htmlspecialcharsbx($_POST["user_name"]), // Входящее имя пользователя
+                    htmlspecialcharsbx($_POST["user_phone"]), // Входящий телефон пользователя
+                    htmlspecialcharsbx($_POST["user_email"]), // Входящий email пользователя
+                    array(
+                        "FROM" => $arParams["FROM"], // Источник сделки
+                        "FROM_FIELD_ID" => $arParams["FROM_FIELD_ID"], // ID пользовательского поля "Источник"
+                        "USERTYPE_FIELD_ID" => $arParams["USERTYPE_FIELD_ID"], // ID пользовательского поля "Тип покупателя"
+                        "TITLE" => $arParams["DEAL_TITLE"], // Название сделки
+                        "CATEGORY_ID" => $arParams["CATEGORY_ID"], // ID Направления (IML - 26)
+                        "ASSIGNED_BY_ID" => $arParams["ASSIGNED_BY_ID"], // ID ответственного пользователя
+                        "STAGE_ID" => $arParams["STAGE_ID"], // Стадия сделки
+                        "USERTYPE_FIELD_LIST_ID" => $arParams["USERTYPE_FIELD_LIST_ID"] // ID типа покупателя
+                    )
+                );
+                $newLead->pushDeal();
+            } catch (Throwable $e) {
+                // log
+            }
 
             LocalRedirect($APPLICATION->GetCurPageParam("success=".$arResult["PARAMS_HASH"]."&utm_source=upakovka_peshta_ru&utm_campaign=".$APPLICATION->GetCurPage()."&utm_medium=site", Array("success", "utm_source", "utm_campaign", "utm_medium")));
         }
