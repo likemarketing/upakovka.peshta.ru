@@ -91,6 +91,23 @@ if (!function_exists('getUTMParamsFromRequest')) {
     }
 }
 
+if (!function_exists('getRefererPage')) {
+    function getRefererPage()
+    {
+        if (empty($_SERVER['HTTP_REFERER'])) {
+            return '';
+        }
+
+        $referer = $_SERVER['HTTP_REFERER'];
+
+        if (is_string($referer)) {
+            return htmlspecialcharsbx(preg_replace('/[\?#].+$/', '', $referer));
+        }
+
+        return '';
+    }
+}
+
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());
 
 $arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" && !$USER->IsAuthorized()) ? "Y" : "N");
@@ -202,6 +219,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
                 "MESSAGE" => htmlspecialcharsbx($_POST["user_msg"]),
                 "FORM" => htmlspecialcharsbx($arParams["FORM"] ?? $arParams['DEAL_TITLE']),
                 "UTM_PARAMS_TABLE" => getUTMParamsFromRequest(),
+                "REFERER" => getRefererPage(),
             );
 
             if (CModule::IncludeModule('subscribe') && !empty($_POST['user_email']) && isset($_POST['SUBSCRIBE'])) {
