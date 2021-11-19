@@ -21,24 +21,28 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 if(strlen($arResult["OK_MESSAGE"]) > 0)
 {
     ?>
-    <div class="modal fade" id="modalSettlementOk" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Спасибо за вашу заявку!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <div id="modalSettlementOk" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-padding-remove popup border_overflow_hide">
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s" uk-grid>
+                <div class="uk-card-media-left uk-cover-container uk-visible@s">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/images/material1.png" alt="" uk-cover>
+                    <canvas width="600" height="650"></canvas>
                 </div>
-                <div class="modal-content-body d-flex justify-content-center align-items-center mt-4 mb-4">
-                    Мы перезвоним Вам в ближайшее время
+                <div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Заявка на расчет стоимости</h3>
+                        <div class="roboto_font uk-margin">
+                            <?=$arParams["OK_TEXT"];?>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button class="uk-modal-close" type="button"></button>
         </div>
     </div>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#modalSettlementIndexOk').modal('show');
+            UIkit.modal(document.getElementById('modalSettlementOk')).show();
         });
     </script>
     <?

@@ -629,10 +629,37 @@ $APPLICATION->SetTitle("Пешта");
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <a href="#feedbacksection" uk-scroll class="red-button" style="width: auto">Оставить заявку</a>
+            <a href="#" uk-toggle="target: #callback-modal" class="red-button" style="width: auto">Оставить заявку</a>
         </div>
     </div>
 </section>
+<?$APPLICATION->IncludeComponent("growtag:main.feedback", "peshta_iml_modal", Array(
+    "FROM" => "upakovka.peshta.ru",
+        "FROM_FIELD_ID" => "UF_CRM_1614519609",
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142",
+        "DEAL_TITLE" => "Заявка IML (Модальное окно)",
+        "FORM" => "Заявка IML",
+        "CATEGORY_ID" => "26",
+        "ASSIGNED_BY_ID" => "18",
+        "STAGE_ID" => "C26:NEW",
+        "USERTYPE_FIELD_LIST_ID" => "",
+        "USE_CAPTCHA" => "N",
+        "OK_TEXT" => "Заявка успешно отправлена. Ожидайте звонка наших менеджеров.", // Сообщение, выводимое пользователю после отправки
+        "EMAIL_TO" => "",   // E-mail, на который будет отправлено письмо
+        "REQUIRED_FIELDS" => array( // Обязательные поля для заполнения
+            0 => "NAME",
+        ),
+        "EVENT_MESSAGE_ID" => array(    // Почтовые шаблоны для отправки письма
+            0 => "7",
+        ),
+        "COMPONENT_TEMPLATE" => "peshta_iml_modal",
+        "USER_CONSENT" => "N",  // Запрашивать согласие
+        "USER_CONSENT_ID" => "0",   // Соглашение
+        "USER_CONSENT_IS_CHECKED" => "Y",   // Галка по умолчанию проставлена
+        "USER_CONSENT_IS_LOADED" => "N",    // Загружать текст сразу
+    ),
+    false
+);?>
 <?$APPLICATION->IncludeComponent(
     "growtag:news.list",
     "index_clients",
