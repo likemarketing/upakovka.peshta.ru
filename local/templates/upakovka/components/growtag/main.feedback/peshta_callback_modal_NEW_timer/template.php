@@ -81,6 +81,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                         </div>
                         <input type="hidden" name="recaptcha_response" id="recaptchaResponse-callback-modal">
                         <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
+                        <input type="hidden" name="referer_query" value="<?= htmlentities(print_r($_SERVER['HTTP_REFERER'] ?? '', true)) ?>">
                     </form>
                 </div>
             </div>

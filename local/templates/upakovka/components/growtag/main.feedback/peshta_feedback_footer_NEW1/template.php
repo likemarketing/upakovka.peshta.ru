@@ -71,6 +71,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                             <span class="checkbox__text">Нажимая на кнопку вы даете согласие на обработку персональных данных и соглашаетесь с <a href="/privacy/" class="color_red">политикой конфиденциальности</a></span>
                         </label>
                     </div>
+                    <input type="hidden" name="referer_query" value="<?= htmlentities(print_r($_SERVER['HTTP_REFERER'] ?? '', true)) ?>">
                 </form>
             </div>
         </div>

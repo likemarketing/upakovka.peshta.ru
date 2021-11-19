@@ -13,6 +13,84 @@ include_once($_SERVER["DOCUMENT_ROOT"]."/crest/requester.php");
  * @global CUser $USER
  */
 
+if (!function_exists('parseQueryUTMParams')) {
+    function parseQueryUTMParams($query)
+    {
+        $utmparams = [
+            'utm_source', 'utm_campaign', 'utm_content', 'utm_term',
+            'keyword', 'q', 'query', 'text', 'words',
+        ];
+
+        $crawlers = [
+            'yandex.ru', 'rambler.ru', 'google.ru', 'google.com',
+            'mail.ru', 'bing.com', 'qip.ru',
+        ];
+
+        $out = $params = [];
+
+        if (preg_match('/\?(.+)$/', urldecode($query), $parts)) {
+            foreach ($crawlers as $crawler) {
+                if (stristr($parts[1], $crawler)) {
+                    $out['source'] = $crawler;
+                }
+            }
+
+            parse_str($parts[1], $params);
+
+            foreach ($utmparams as $name) {
+                if (!empty($params[$name])) {
+                    $isCp1251 = md5($params[$name]) == md5(iconv('UTF-8', 'UTF-8', $params[$name]));
+
+                    $out[$name] = $params[$name];
+
+                    if ($isCp1251) {
+                        $out[$name] = iconv('cp1251', 'utf-8', $out[$name]);
+                    }
+                }
+            }
+
+            if (!empty($out)) {
+                return $out;
+            }
+        }
+
+        return null;
+    }
+}
+
+if (!function_exists('getUTMParamsFromRequest')) {
+    function getUTMParamsFromRequest()
+    {
+        $sections = [
+            'Параметры перехода' => $_POST['referer_query'] ?? '',
+            'Параметры визита'   => $_SERVER['HTTP_REFERER'] ?? '',
+        ];
+
+        $out = '';
+
+        foreach ($sections as $sectionname => $query) {
+            if (empty($query) || !is_string($query)) {
+                continue;
+            }
+
+            $params = parseQueryUTMParams($query);
+
+            if (empty($params)) {
+                continue;
+            }
+
+            $rows = '';
+            foreach ($params as $key => $value) {
+                $rows .= $key . ': ' . htmlspecialchars($value);
+            }
+
+            $out .= $sectionname . ':' . "\n" . $rows . "\n\n";
+        }
+
+        return $out;
+    }
+}
+
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());
 
 $arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" && !$USER->IsAuthorized()) ? "Y" : "N");
@@ -122,6 +200,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
                 "AUTHOR_EMAIL" => htmlspecialcharsbx($_POST["user_email"]),
                 "AUTHOR_VOL" => $authorVolStr,
                 "MESSAGE" => htmlspecialcharsbx($_POST["user_msg"]),
+                "FORM" => htmlspecialcharsbx($arParams["FORM"] ?? 'Заявка'),
+                "UTM_PARAMS_TABLE" => getUTMParamsFromRequest(),
             );
 
             if (CModule::IncludeModule('subscribe') && !empty($_POST['user_email']) && isset($_POST['SUBSCRIBE'])) {

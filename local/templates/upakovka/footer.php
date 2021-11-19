@@ -166,6 +166,7 @@
 		"FROM_FIELD_ID" => "UF_CRM_1614519609",
 		"USERTYPE_FIELD_ID" => "UF_CRM_1614519142",
 		"DEAL_TITLE" => "Заявка на тест или пробный заказ (Модальное окно)",
+        "FORM" => "Заявка на расчет",
 		"CATEGORY_ID" => "26",
 		"ASSIGNED_BY_ID" => "18",
 		"STAGE_ID" => "C26:NEW",
