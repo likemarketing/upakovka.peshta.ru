@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Тубный ламинат");
-$APPLICATION->SetPageProperty("description", "Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текстРыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст");
+$APPLICATION->SetPageProperty("keywords", "Тубный ламинат, тубный ламинат цена, печать на тубах, декорирование туб");
+$APPLICATION->SetPageProperty("title", "Печать на тубном ламинате");
+$APPLICATION->SetPageProperty("description", "Заказать печать на тубном ламинате.  Короткие и большие тиражи, широкие возможности для декорирования, печать низкомиграционными красками");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Тубный ламинат");
 ?>

@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "smart упаковка, смарт упаковка, умная упаковка, упаковка смарт купить, переменный код, qr код печать");
 $APPLICATION->SetPageProperty("title", "Печать переменного кода и SMART-упаковки в Пеште");
-$APPLICATION->SetPageProperty("description", "Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текстРыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст");
+$APPLICATION->SetPageProperty("description", "Smart упаковка и печать переменного кода в Пеште. Прямая коммуникация с потребителем, увеличение продаж до 40% с помощью вовлечения клиентов в программы лояльности, расширение активной клиентской базы в десятки ра");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Переменный код и SMART-упаковка");
 ?>

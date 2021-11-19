@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Заказать гибкую упаковку");
+$APPLICATION->SetPageProperty("description", "Печать гибкой упаковки в Пеште. Широкие возможности для декорирования, печать коротких и больших тиражей, выезд специалистов на ваше производство");
+$APPLICATION->SetPageProperty("keywords", "гибкая упаковка, гибкая упаковка пленка, гибкая упаковка цена, изготовление гибкой упаковки, купить гибкую упаковку, печать гибкой упаковки");
+$APPLICATION->SetPageProperty("title", "Заказать гибкую упаковку в Пеште");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Гибкая упаковка");
 ?>

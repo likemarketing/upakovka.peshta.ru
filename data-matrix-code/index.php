@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("keywords", "data matrix коды, дата матрикс код, дата матрикс код честный знак, код маркировки дата матрикс, печать кодов дата матрикс, маркировка кодами data matrix, штрих код дата матрикс, сделать дата матрикс код, маркировке кодами data matrix");
 $APPLICATION->SetPageProperty("title", "Печать Data Matrix Code в Пеште");
-$APPLICATION->SetPageProperty("description", "Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текстРыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст Рыба текст");
+$APPLICATION->SetPageProperty("description", "Печать маркировки Data Matrix Code в Пеште. Соответствие государственным стандартам,  гарантия считывания кода. Мы аккредитованы системой \"Честный ЗНАК\"");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Data Matrix Code");
 ?>

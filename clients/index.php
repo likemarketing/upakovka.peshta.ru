@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Мы печатаем полиграфию в Ижевске. Оперативная поддержка яркими промо-материалами для роста бизнеса.");
+$APPLICATION->SetPageProperty("description", "Узнайте, что говорят о нас наши клиенты");
 $APPLICATION->SetPageProperty("keywords", "типография, ижевск, визитки, фирменный стиль, заказать визитки, упаковка, печать, штампы, буклеты, полиграфия, нумераторы, полиграфия для бизнеса");
-$APPLICATION->SetPageProperty("title", "ПЕШТА - Клиенты");
+$APPLICATION->SetPageProperty("title", "Отзывы о нашей работе");
 $APPLICATION->SetTitle("Клиенты");
 $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APPLICATION->GetCurPage());
 ?>

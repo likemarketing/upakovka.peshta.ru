@@ -1,6 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("title", "Заказать круговую этикетку");
+$APPLICATION->SetPageProperty("description", "Печать круговой этикетки в Пеште.  Широкие возможности для декорирования, удобная доставка, соблюдение сроков поставки.");
+$APPLICATION->SetPageProperty("keywords", "круговая этикетка, круговые этикетки на бутылки, круговая этикетка из bopp пленки, круговая полипропиленовая этикетка");
+$APPLICATION->SetPageProperty("title", "Заказать круговую этикетку на бутылки - компания Пешта");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Круговая этикетка");
 ?>

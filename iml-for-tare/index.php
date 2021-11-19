@@ -1,5 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Печать вплавляемой этикетки в Пеште. Соответствие стандартам, жесткие параметры по срокам и качеству, удобная доставка по России и странам СНГ");
+$APPLICATION->SetPageProperty("keywords", "iml печать, iml этикетка, вплавляемая этикетка, вплавляемая этикетка iml, инмолд этикетка");
+$APPLICATION->SetPageProperty("title", "Печать IML этикеток для производителей тары и упаковки");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Пешта");
 ?>

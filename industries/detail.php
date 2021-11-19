@@ -1,9 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Мы печатаем полиграфию в Ижевске. Оперативная поддержка яркими промо-материалами для роста бизнеса.");
-$APPLICATION->SetPageProperty("keywords", "типография, ижевск, визитки, фирменный стиль, заказать визитки, упаковка, печать, штампы, буклеты, полиграфия, нумераторы, полиграфия для бизнеса");
-$APPLICATION->SetPageProperty("title", "ПЕШТА - Индивидуальные решения для вашего бизнеса");
-$APPLICATION->SetTitle("Индивидуальные решения для вашего бизнеса");
+$APPLICATION->SetPageProperty("description", "Производство упаковки для молочных продуктов в Пеште. Индивидуальные решения по упаковке, комплексный подход к решению задач вашего бизнеса.");
+$APPLICATION->SetPageProperty("keywords", "купить упаковку молочные продукты, производство упаковки для молока, упаковка для молочной продукции, упаковка для молочных продуктов, этикетки молочных продуктов, упаковка для молочной продукции производители");
+$APPLICATION->SetPageProperty("title", "Заказать упаковку для косметических средств в Пеште");
+$APPLICATION->SetTitle("Упаковка для молочных продуктов");
 $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APPLICATION->GetCurPage());
 ?>
 <?$APPLICATION->IncludeComponent(

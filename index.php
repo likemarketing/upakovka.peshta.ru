@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Мы печатаем полиграфию в Ижевске. Оперативная поддержка яркими промо-материалами для роста бизнеса.");
-$APPLICATION->SetPageProperty("keywords", "типография, ижевск, визитки, фирменный стиль, заказать визитки, упаковка, печать, штампы, буклеты, полиграфия, нумераторы, полиграфия для бизнеса");
-$APPLICATION->SetPageProperty("title", "ПЕШТА - Типография Ижевск");
+$APPLICATION->SetPageProperty("description", "Ролевая печать в Пеште. Контроль качества продукции на пяти этапах производства, современные технологии печати, соблюдение сроков поставки.");
+$APPLICATION->SetPageProperty("keywords", "типография, ролевая печать, флексопечать, печать в рулонах");
+$APPLICATION->SetPageProperty("title", "Ролевая печать этикеток в Пеште");
 $APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
 $APPLICATION->SetTitle("Пешта");
 ?>
