@@ -92,7 +92,7 @@
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/dest/scripts/uikit.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/dist/js/slick.js"></script>
 <script type="text/javascript" src="<?=SITE_TEMPLATE_PATH?>/dest/scripts/script.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackRecap&render=6LfkvkMaAAAAABn08kEced07b6TehmZKvtKfsrTc"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallbackRecap&render=6LeGUUQdAAAAANDoWLemf5B_3iJ9k8MKvAQrSKwp"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/jquery.maskedinput.min.js"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/app.js"></script>
 <?$APPLICATION->IncludeComponent("growtag:news.list", "modals", Array(

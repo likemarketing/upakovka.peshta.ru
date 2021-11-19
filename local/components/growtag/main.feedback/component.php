@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
         }
         // reCAPTCHA
         if(!empty($_POST['recaptcha_response'])){
-            $recaptcha_key = '6LfkvkMaAAAAAFl8v20Y1tLk7364UJzRW9SxcE49';
+            $recaptcha_key = '6LeGUUQdAAAAAHb5w8QvtNjM2skD5Ajm34JxmSgb';
 
             $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
             $recaptcha_params = [

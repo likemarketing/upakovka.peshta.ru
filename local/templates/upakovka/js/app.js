@@ -1,7 +1,7 @@
 /********** RECAPTCHA **********/
 var onloadCallbackRecap = function() {
     grecaptcha.ready(function () {
-        grecaptcha.execute('6LfkvkMaAAAAABn08kEced07b6TehmZKvtKfsrTc', { action: 'contact_callback' }).then(function (token) {
+        grecaptcha.execute('6LeGUUQdAAAAANDoWLemf5B_3iJ9k8MKvAQrSKwp', { action: 'contact_callback' }).then(function (token) {
             var inputs = document.getElementsByName("recaptcha_response");
             inputs.forEach(el => el.value = token);
         });
