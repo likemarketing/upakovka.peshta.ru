@@ -32,7 +32,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                     <div class="uk-card-body">
                         <h3 class="uk-card-title">Получить материал на Email</h3>
                         <div class="roboto_font uk-margin">
-                            <?=$arParams["TITLE_TEXT"];?>
+                            <?=$arResult["OK_MESSAGE"];?>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,6 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                     <form class="form form_modal" action="<?=POST_FORM_ACTION_URI?>" method="POST">
                         <?=bitrix_sessid_post()?>
                         <div class="uk-margin"><input class="uk-input" type="text" placeholder="Ваше имя *" required name="user_name" value="<?=$arResult["AUTHOR_NAME"]?>"></div>
-                        <div class="uk-margin"><input class="uk-input" type="text" placeholder="Ваш телефон *" required name="user_phone" value="<?=$arResult["AUTHOR_PHONE"]?>"></div>
                         <div class="uk-margin"><input class="uk-input" type="text" placeholder="Ваш email *" required name="user_email" value="<?=$arResult["AUTHOR_EMAIL"]?>"></div>
                         <div class="uk-margin">
                             <input type="submit" name="submit" class="red-button" <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> value="Отправить"/>
@@ -79,6 +78,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                         </div>
                         <input type="hidden" name="recaptcha_response" id="recaptchaResponse-callback-modal">
                         <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
+                        <input type="hidden" name="RESOURCE_ID" value="">
                         <input type="hidden" name="referer_query" value="<?= htmlentities(print_r($_SERVER['HTTP_REFERER'] ?? '', true)) ?>">
                     </form>
                 </div>

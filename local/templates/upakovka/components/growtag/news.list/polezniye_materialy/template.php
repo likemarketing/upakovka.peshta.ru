@@ -29,7 +29,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
                 <?echo $arItem["PREVIEW_TEXT"];?>
             </div>
             <div class="uk-width-1-3@l">
-                <a href="" class="red-button" uk-toggle="target: #material-modal" aria-expanded="false">
+                <a href="#material-modal" class="red-button" uk-toggle aria-expanded="false" data-id="<?= $arItem['ID'] ?>">
                     получить на e-mail
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -42,32 +42,3 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
     </div>
 </div>
 <?endforeach;?>
-<?$APPLICATION->IncludeComponent(
-    "growtag:main.feedback",
-    "material_modal",
-    array(
-        "FROM" => "upakovka.peshta.ru", // Источник сделки
-        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
-        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
-        "DEAL_TITLE" => "Скачивание материала", // Название сделки
-        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
-        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
-        "STAGE_ID" => "C26:NEW", // Стадия сделки
-        "USERTYPE_FIELD_LIST_ID" => 540, // ID типа покупателя
-        "USE_CAPTCHA" => "N",
-        "OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",
-        "EMAIL_TO" => "",
-        "REQUIRED_FIELDS" => array(
-            0 => "NAME",
-        ),
-        "EVENT_MESSAGE_ID" => array(
-            0 => "26",
-        ),
-        "COMPONENT_TEMPLATE" => "peshta_feedback_iml",
-        "USER_CONSENT" => "N",
-        "USER_CONSENT_ID" => "0",
-        "USER_CONSENT_IS_CHECKED" => "Y",
-        "USER_CONSENT_IS_LOADED" => "N"
-    ),
-    false
-);?>

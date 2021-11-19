@@ -3,6 +3,8 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 
 include_once($_SERVER["DOCUMENT_ROOT"]."/crest/requester.php");
 
+CModule::IncludeModule("iblock");
+
 /**
  * Bitrix vars
  *
@@ -255,7 +257,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
             }
 
             if(isset($arParams["EVENT_MESSAGE_ID_OUT"]) && !empty($arParams["EVENT_MESSAGE_ID_OUT"])) {
-                CEvent::SendImmediate($arParams["EVENT_NAME"], SITE_ID, $arFields, "N", IntVal($arParams["EVENT_MESSAGE_ID_OUT"]));
+                $loopbackFileId = null;
+
+                if (!empty($arParams['EVENT_OUT_ATTACHMENTS_SOURCE_IBLOCK_ID']) && !empty($_POST['RESOURCE_ID']) && is_numeric($_POST['RESOURCE_ID'])) {
+                    $query = CIBlockElement::GetProperty($arParams['EVENT_OUT_ATTACHMENTS_SOURCE_IBLOCK_ID'], $_POST['RESOURCE_ID'], [], ["CODE" => $arParams["EVENT_OUT_ATTACHMENT_PROPERTY_NAME"]]);
+
+                    $prop = $query->Fetch();
+
+                    if ($prop && !empty($prop['VALUE'])) {
+                        $loopbackFileId = [$prop['VALUE']];
+                    }
+                }
+
+                CEvent::SendImmediate($arParams["EVENT_NAME"], SITE_ID, $arFields, "N", IntVal($arParams["EVENT_MESSAGE_ID_OUT"]), $loopbackFileId);
             }
 
             $_SESSION["MF_NAME"] = htmlspecialcharsbx($_POST["user_name"]);

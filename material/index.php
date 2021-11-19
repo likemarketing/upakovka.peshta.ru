@@ -83,6 +83,49 @@ $APPLICATION->SetTitle("Полезные материалы");
 	),
 	false
 );?>
+<?$APPLICATION->IncludeComponent(
+    "growtag:main.feedback",
+    "material_modal",
+    array(
+        "FROM" => "upakovka.peshta.ru", // Источник сделки
+        "FROM_FIELD_ID" => "UF_CRM_1614519609", // ID пользовательского поля "Источник"
+        "USERTYPE_FIELD_ID" => "UF_CRM_1614519142", // ID пользовательского поля "Тип покупателя"
+        "DEAL_TITLE" => "Скачивание материала", // Название сделки
+        "CATEGORY_ID" => 26, // ID Направления (IML - 26)
+        "ASSIGNED_BY_ID" => 18, // ID ответственного пользователя
+        "STAGE_ID" => "C26:NEW", // Стадия сделки
+        "USERTYPE_FIELD_LIST_ID" => 540, // ID типа покупателя
+        "USE_CAPTCHA" => "N",
+        "OK_TEXT" => "Заявка успешно отправлена. Материалы отправлены на указанный email.",
+        "EMAIL_TO" => "",
+        "REQUIRED_FIELDS" => array(
+            0 => "NAME",
+        ),
+        "EVENT_MESSAGE_ID" => array(
+            0 => "7",
+        ),
+        "EVENT_MESSAGE_ID_OUT" => '18',
+        "EVENT_OUT_ATTACHMENTS_SOURCE_IBLOCK_ID" => "36",
+        "EVENT_OUT_ATTACHMENT_PROPERTY_NAME" => "FILE",
+        "COMPONENT_TEMPLATE" => "peshta_feedback_iml",
+        "USER_CONSENT" => "N",
+        "USER_CONSENT_ID" => "0",
+        "USER_CONSENT_IS_CHECKED" => "Y",
+        "USER_CONSENT_IS_LOADED" => "N"
+    ),
+    false
+);?>
+<script>
+    var currentItemId = 0;
+
+    $('[href="#material-modal"]').click(function(e) {
+        currentItemId = this.dataset.id;
+    });
+
+    $('#material-modal').on("shown", function (e) {
+        $(this).find('[name="RESOURCE_ID"]').val(currentItemId);
+    });
+</script>
     </div>
 </div>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
