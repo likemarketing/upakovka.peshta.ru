@@ -629,7 +629,7 @@ $APPLICATION->SetTitle("Пешта");
             </div>
         </div>
         <div class="row justify-content-center align-items-center">
-            <a href="#" data-toggle="modal" data-target="#modalUpakovka" class="red-button" style="width: auto">Оставить заявку</a>
+            <a href="#feedbacksection" uk-scroll class="red-button" style="width: auto">Оставить заявку</a>
         </div>
     </div>
 </section>

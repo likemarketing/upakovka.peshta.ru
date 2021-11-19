@@ -24,7 +24,7 @@ $this->setFrameMode(true);
                         <?echo $arResult["DETAIL_TEXT"];?>
                     </div>
                     <div class="slide-button mt-5">
-                        <a href="#" data-toggle="modal" data-target="#modalUpakovka">
+                        <a href="#feedbacksection" uk-scroll>
                             Оставить заявку
                         </a>
                     </div>

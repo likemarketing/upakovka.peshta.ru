@@ -44,7 +44,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
     <?
 }
 ?>
-<section class="index-section-7 test-ticket">
+<section class="index-section-7 test-ticket" id="feedbacksection">
     <div class="container">
         <div class="row align-items-center">
             <div class="index-section-7__text col-md-6">
