@@ -200,7 +200,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
                 "AUTHOR_EMAIL" => htmlspecialcharsbx($_POST["user_email"]),
                 "AUTHOR_VOL" => $authorVolStr,
                 "MESSAGE" => htmlspecialcharsbx($_POST["user_msg"]),
-                "FORM" => htmlspecialcharsbx($arParams["FORM"] ?? 'Заявка'),
+                "FORM" => htmlspecialcharsbx($arParams["FORM"] ?? $arParams['DEAL_TITLE']),
                 "UTM_PARAMS_TABLE" => getUTMParamsFromRequest(),
             );
 
