@@ -54,7 +54,7 @@ $this->setFrameMode(true);
                 <?endforeach;?>
             </div>
             <div class="row justify-content-center align-items-center">
-                <a href="/material/" class="red-button">Узнать больше об IML-этикетках</a>
+                <a href="/material/" class="red-button"><?= GetMessage('Узнать больше об IML-этикетках') ?></a>
             </div>
         </div>
     </div>

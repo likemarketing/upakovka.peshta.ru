@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/local/templates/upakovka/lang/' . LANGUAGE_ID . '/global.php'); ?><!DOCTYPE html>
+<html lang="<?= LANGUAGE_ID ?>">
 <head>
     <meta charset="UTF-8">
     <?$APPLICATION->ShowHead();?>
@@ -18,10 +18,10 @@
     <meta property="og:title" content="<?$APPLICATION->ShowTitle();?>"/>
     <meta property="og:url" content="<?=$APPLICATION->GetCurDir()?>"/>
     <meta property="og:image" content="<?=SITE_TEMPLATE_PATH?>/images/logo.png"/>
-    <meta property="og:site_name" content="ПЕШТА - Типография Ижевск"/>
+    <meta property="og:site_name" content="<?= GetMessage('ПЕШТА - Типография Ижевск') ?>"/>
     <meta property="og:description" content="<?$APPLICATION->ShowProperty('description');?>"/>
     <meta property="og:type" content="website" />
-    <meta name="copyright" lang="ru" content='Типография "ПЕШТА" Ижевск' />
+    <meta name="copyright" lang="ru" content='<?= GetMessage('Типография "ПЕШТА" Ижевск') ?>' />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/dist/css/uikit.css">
     <link href="<?=SITE_TEMPLATE_PATH?>/dest/style/style.css" rel="stylesheet">
@@ -63,7 +63,7 @@
                                         <div class="search uk-margin-small">
                                             <form class="search__body uk-search">
                                                 <input class="uk-search-input search__text" type="search"
-                                                       placeholder="Искать товары">
+                                                       placeholder="<?= GetMessage('Искать товары') ?>">
                                                 <button type="submit" class="search__submit">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                          xmlns="http://www.w3.org/2000/svg">
@@ -87,35 +87,35 @@
                                         <hr>
                                         <ul class="uk-nav-default uk-nav-parent-icon uk-text-uppercase" uk-nav>
                                             <li class="uk-parent">
-                                                <a href="#">IML Этикетка</a>
+                                                <a href="#"><?= GetMessage('IML Этикетка') ?></a>
                                                 <ul class="uk-nav-sub">
-                                                    <li><a href="/iml-for-brand/">Владельцам бренда</a></li>
-                                                    <li><a href="/iml-for-tare/">Изготовителям тары</a></li>
+                                                    <li><a href="<?= SITE_DIR ?>iml-for-brand/"><?= GetMessage('Владельцам бренда') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>iml-for-tare/"><?= GetMessage('Изготовителям тары') ?></a></li>
                                                 </ul>
                                             </li>
                                             <li class="">
-                                                <a href="/laminat/">Тубный ламинат</a>
+                                                <a href="<?= SITE_DIR ?>laminat/"><?= GetMessage('Тубный ламинат') ?></a>
                                             </li>
                                             </li>
                                             <li class="uk-parent">
-                                                <a href="#">Круговая этикетка</a>
+                                                <a href="#"><?= GetMessage('Круговая этикетка') ?></a>
                                                 <ul class="uk-nav-sub">
-                                                    <li><a href="/krugovaya-etiketka/">Круговая этикетка</a></li>
-                                                    <li><a href="/gibkaya-upakovka/">Гибкая упаковка</a></li>
+                                                    <li><a href="<?= SITE_DIR ?>krugovaya-etiketka/"><?= GetMessage('Круговая этикетка') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>gibkaya-upakovka/"><?= GetMessage('Гибкая упаковка') ?></a></li>
                                                 </ul>
                                             </li>
                                             <li class="">
-                                                <a href="/samokleyashchayasya-etiketka/">Самоклеющаяся этикетка</a>
+                                                <a href="<?= SITE_DIR ?>samokleyashchayasya-etiketka/"><?= GetMessage('Самоклеющаяся этикетка') ?></a>
                                             </li>
                                             <li class="uk-parent">
-                                                <a href="#">Переменный код</a>
+                                                <a href="#"><?= GetMessage('Переменный код') ?></a>
                                                 <ul class="uk-nav-sub">
-                                                    <li><a href="/data-matrix-code/">Data-Matrix Code</a></li>
-                                                    <li><a href="/smart-upakovka/">SMART-Упаковка</a></li>
+                                                    <li><a href="<?= SITE_DIR ?>data-matrix-code/"><?= GetMessage('Data-Matrix Code') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>smart-upakovka/"><?= GetMessage('SMART-Упаковка') ?></a></li>
                                                 </ul>
                                             </li>
                                             <li class="uk-parent">
-                                                <a href="/industries/">Отрасли</a>
+                                                <a href="<?= SITE_DIR ?>industries/"><?= GetMessage('Отрасли') ?></a>
                                                 <ul class="uk-nav-sub">
                                                     <?$APPLICATION->IncludeComponent("growtag:news.list", "industries_menu", Array(
                                                         "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
@@ -130,7 +130,7 @@
                                                         "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
                                                         "CACHE_TYPE" => "A",	// Тип кеширования
                                                         "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
-                                                        "DESC_TEXT" => "Подзаголовок",	// Подзаголовок
+                                                        "DESC_TEXT" => GetMessage('Подзаголовок'),	// Подзаголовок
                                                         "DETAIL_URL" => "#SITE_DIR#/industries/#ELEMENT_CODE#/",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
                                                         "DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
                                                         "DISPLAY_DATE" => "Y",	// Выводить дату элемента
@@ -144,7 +144,7 @@
                                                         ),
                                                         "FILTER_NAME" => "",	// Фильтр
                                                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-                                                        "IBLOCK_ID" => "48",	// Код информационного блока
+                                                        "IBLOCK_ID" => GetMessage('HEADER_INDUSTRY_IBLOCK_ID'),	// Код информационного блока
                                                         "IBLOCK_TYPE" => "industries",	// Тип информационного блока (используется только для проверки)
                                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
                                                         "INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
@@ -156,7 +156,7 @@
                                                         "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
                                                         "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
                                                         "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
-                                                        "PAGER_TITLE" => "Новости",	// Название категорий
+                                                        "PAGER_TITLE" => GetMessage('Новости'),	// Название категорий
                                                         "PARENT_SECTION" => "",	// ID раздела
                                                         "PARENT_SECTION_CODE" => "",	// Код раздела
                                                         "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
@@ -176,21 +176,21 @@
                                                         "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
                                                         "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
                                                         "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
-                                                        "TITLE_TEXT" => "Заголовок",	// Заголовок
+                                                        "TITLE_TEXT" => GetMessage('Заголовок'),	// Заголовок
                                                     ),
                                                         false
                                                     );?>
                                                 </ul>
                                             </li>
                                             <li class="uk-parent">
-                                                <a href="/about/">О компании</a>
+                                                <a href="<?= SITE_DIR ?>about/"><?= GetMessage('О компании') ?></a>
                                                 <ul class="uk-nav-sub">
-                                                    <li><a href="/contacts/">Контакты</a></li>
-                                                    <li><a href="/oborudovanie/">Оборудование</a></li>
-                                                    <li><a href="/clients/">Клиенты</a></li>
-                                                    <li><a href="/material/">Полезные материалы</a></li>
-                                                    <li><a href="/5s-standarts/">Стандарты 5С</a></li>
-                                                    <li><a href="/brc-standarts/">Стандарты BRC</a></li>
+                                                    <li><a href="<?= SITE_DIR ?>contacts/"><?= GetMessage('Контакты') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>oborudovanie/"><?= GetMessage('Оборудование') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>clients/"><?= GetMessage('Клиенты') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>material/"><?= GetMessage('Полезные материалы') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>5s-standarts/"><?= GetMessage('Стандарты 5С') ?></a></li>
+                                                    <li><a href="<?= SITE_DIR ?>brc-standarts/"><?= GetMessage('Стандарты BRC') ?></a></li>
                                                 </ul>
                                         </ul>
                                         <hr>
@@ -205,8 +205,8 @@
                                             </a>
                                         </div>
                                         <div class="fs-12 uk-margin-small">
-                                            <div>г. Ижевск, ул. Кирова, 113</div>
-                                            <div class="uk-text-muted">ПН – ПТ с 09:00 до 20:00</div>
+                                            <div><?= GetMessage('г. Ижевск, ул. Кирова, 113') ?></div>
+                                            <div class="uk-text-muted"><?= GetMessage('ПН – ПТ с 09:00 до 20:00') ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +217,7 @@
             </nav>
             <div class="uk-flex">
                 <div class="padding_remove_mobile_left">
-                    <a href="/">
+                    <a href="<?= SITE_DIR ?>">
                         <svg class="uk-visible@m" width="161" height="28" viewBox="0 0 161 28" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -265,13 +265,13 @@
                     </a>
                 </div>
                 <div class="fs-12 uk-visible@m uk-margin-left">
-                    <div>г. Ижевск, ул. Кирова, 113</div>
-                    <div class="uk-text-muted">ПН – ПТ с 09:00 до 20:00</div>
+                    <div><?= GetMessage('г. Ижевск, ул. Кирова, 113') ?></div>
+                    <div class="uk-text-muted"><?= GetMessage('ПН – ПТ с 09:00 до 20:00') ?></div>
                 </div>
             </div>
             <div class="uk-visible@m">
-                <a target="_blank" href="/blog/" class="blog-and-case">
-                    блог и кейсы
+                <a target="_blank" href="<?= SITE_DIR ?>blog/" class="blog-and-case">
+                    <?= GetMessage('блог и кейсы') ?>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.3367 7.845L6.16417 15.0175L4.98584 13.8392L12.1575 6.66667H5.83667V5H15.0033V14.1667H13.3367V7.845Z"
                               fill="#FA3F3F"/>
@@ -284,7 +284,7 @@
                         <path d="M12.2427 11.5761L8 15.8188L3.75734 11.5761C2.91823 10.737 2.34679 9.66789 2.11529 8.50401C1.88378 7.34013 2.0026 6.13373 2.45673 5.03738C2.91086 3.94103 3.6799 3.00396 4.66659 2.34467C5.65328 1.68539 6.81332 1.3335 8 1.3335C9.18669 1.3335 10.3467 1.68539 11.3334 2.34467C12.3201 3.00396 13.0891 3.94103 13.5433 5.03738C13.9974 6.13373 14.1162 7.34013 13.8847 8.50401C13.6532 9.66789 13.0818 10.737 12.2427 11.5761ZM8 8.66678C8.35362 8.66678 8.69276 8.5263 8.94281 8.27625C9.19286 8.0262 9.33334 7.68707 9.33334 7.33344C9.33334 6.97982 9.19286 6.64068 8.94281 6.39064C8.69276 6.14059 8.35362 6.00011 8 6.00011C7.64638 6.00011 7.30724 6.14059 7.05719 6.39064C6.80715 6.64068 6.66667 6.97982 6.66667 7.33344C6.66667 7.68707 6.80715 8.0262 7.05719 8.27625C7.30724 8.5263 7.64638 8.66678 8 8.66678Z"
                               fill="#737373"/>
                     </svg>
-                    Ижевск
+                    <?= GetMessage('Ижевск') ?>
                 </a>
             </div>
             <div class="uk-visible@m">
@@ -306,7 +306,7 @@
                 </a>
             </div>
             <div class="padding_remove_mobile_left">
-                <button class="red-button red-button_small " uk-toggle="target: #callback-modal">Заявка на расчет</button>
+                <button class="red-button red-button_small " uk-toggle="target: #callback-modal"><?= GetMessage('Заявка на расчет') ?></button>
             </div>
         </div>
         <hr class="uk-visible@m">
@@ -315,40 +315,40 @@
                 <div class="uk-navbar-left uk-width">
                     <ul class="uk-navbar-nav uk-flex-between uk-width">
                         <li>
-                            <a href="#">IML Этикетка</a>
+                            <a href="#"><?= GetMessage('IML Этикетка') ?></a>
                             <div class="uk-navbar-dropdown uk-box-shadow-small border-radius">
                                 <ul class="uk-nav uk-navbar-dropdown-nav fs-14">
-                                    <li><a href="/iml-for-brand/">Владельцам бренда</a></li>
-                                    <li><a href="/iml-for-tare/">Изготовителям тары</a></li>
+                                    <li><a href="<?= SITE_DIR ?>iml-for-brand/"><?= GetMessage('Владельцам бренда') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>iml-for-tare/"><?= GetMessage('Изготовителям тары') ?></a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <a href="/laminat/">тубный ламинат</a>
+                            <a href="<?= SITE_DIR ?>laminat/"><?= GetMessage('Тубный ламинат') ?></a>
                         </li>
                         <li>
-                            <a href="#">Круговая этикетка</a>
+                            <a href="#"><?= GetMessage('Круговая этикетка') ?></a>
                             <div class="uk-navbar-dropdown uk-box-shadow-small border-radius">
                                 <ul class="uk-nav uk-navbar-dropdown-nav fs-14">
-                                    <li><a href="/krugovaya-etiketka/">Круговая этикетка</a></li>
-                                    <li><a href="/gibkaya-upakovka/">Гибкая упаковка</a></li>
+                                    <li><a href="<?= SITE_DIR ?>krugovaya-etiketka/"><?= GetMessage('Круговая этикетка') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>gibkaya-upakovka/"><?= GetMessage('Гибкая упаковка') ?></a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <a href="/samokleyashchayasya-etiketka/">Самоклеющаяся этикетка</a>
+                            <a href="<?= SITE_DIR ?>samokleyashchayasya-etiketka/"><?= GetMessage('Самоклеющаяся этикетка') ?></a>
                         </li>
                         <li>
-                            <a href="#">Переменный код</a>
+                            <a href="#"><?= GetMessage('Переменный код') ?></a>
                             <div class="uk-navbar-dropdown uk-box-shadow-small border-radius">
                                 <ul class="uk-nav uk-navbar-dropdown-nav fs-14">
-                                    <li><a href="/data-matrix-code/">Data-Matrix Code</a></li>
-                                    <li><a href="/smart-upakovka/">SMART-Упаковка</a></li>
+                                    <li><a href="<?= SITE_DIR ?>data-matrix-code/"><?= GetMessage('Data-Matrix Code') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>smart-upakovka/"><?= GetMessage('SMART-Упаковка') ?></a></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <a href="/industries/">Отрасли</a>
+                            <a href="<?= SITE_DIR ?>industries/"><?= GetMessage('Отрасли') ?></a>
                             <div class="uk-navbar-dropdown uk-box-shadow-small border-radius">
                                 <ul class="uk-nav uk-navbar-dropdown-nav fs-14">
                                     <?$APPLICATION->IncludeComponent("growtag:news.list", "industries_menu", Array(
@@ -364,7 +364,7 @@
                                         "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
                                         "CACHE_TYPE" => "A",	// Тип кеширования
                                         "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
-                                        "DESC_TEXT" => "Подзаголовок",	// Подзаголовок
+                                        "DESC_TEXT" => GetMessage('Подзаголовок'),	// Подзаголовок
                                         "DETAIL_URL" => "#SITE_DIR#/industries/#ELEMENT_CODE#/",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
                                         "DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
                                         "DISPLAY_DATE" => "Y",	// Выводить дату элемента
@@ -378,7 +378,7 @@
                                         ),
                                         "FILTER_NAME" => "",	// Фильтр
                                         "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
-                                        "IBLOCK_ID" => "48",	// Код информационного блока
+                                        "IBLOCK_ID" => GetMessage('HEADER_INDUSTRY_IBLOCK_ID'),	// Код информационного блока
                                         "IBLOCK_TYPE" => "industries",	// Тип информационного блока (используется только для проверки)
                                         "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
                                         "INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
@@ -390,7 +390,7 @@
                                         "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
                                         "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
                                         "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
-                                        "PAGER_TITLE" => "Новости",	// Название категорий
+                                        "PAGER_TITLE" => GetMessage('Новости'),	// Название категорий
                                         "PARENT_SECTION" => "",	// ID раздела
                                         "PARENT_SECTION_CODE" => "",	// Код раздела
                                         "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
@@ -410,7 +410,7 @@
                                         "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
                                         "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
                                         "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
-                                        "TITLE_TEXT" => "Заголовок",	// Заголовок
+                                        "TITLE_TEXT" => GetMessage('Заголовок'),	// Заголовок
                                     ),
                                         false
                                     );?>
@@ -418,15 +418,15 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/about/">О компании</a>
+                            <a href="<?= SITE_DIR ?>about/"><?= GetMessage('О компании') ?></a>
                             <div class="uk-navbar-dropdown uk-box-shadow-small border-radius">
                                 <ul class="uk-nav uk-navbar-dropdown-nav fs-14">
-                                    <li><a href="/contacts/">Контакты</a></li>
-                                    <li><a href="/oborudovanie/">Оборудование</a></li>
-                                    <li><a href="/clients/">Клиенты</a></li>
-                                    <li><a href="/material/">Полезные материалы</a></li>
-                                    <li><a href="/5s-standarts/">Стандарты 5С</a></li>
-                                    <li><a href="/brc-standarts/">Стандарты BRC</a></li>
+                                    <li><a href="<?= SITE_DIR ?>contacts/"><?= GetMessage('Контакты') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>oborudovanie/"><?= GetMessage('Оборудование') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>clients/"><?= GetMessage('Клиенты') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>material/"><?= GetMessage('Полезные материалы') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>5s-standarts/"><?= GetMessage('Стандарты 5С') ?></a></li>
+                                    <li><a href="<?= SITE_DIR ?>brc-standarts/"><?= GetMessage('Стандарты BRC') ?></a></li>
                                 </ul>
                             </div>
                         </li>

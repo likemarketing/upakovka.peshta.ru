@@ -14,7 +14,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 {?>
     <script type="text/javascript">
         $(document).ready(function() {
-            toastr.error('Что-то пошло не так... Попробуйте еще раз!', 'УПС!...');
+            toastr.error('<?= GetMessage('Что-то пошло не так... Попробуйте еще раз!') ?>', '<?= GetMessage('УПС!...') ?>');
         });
     </script>
 <?}
@@ -30,7 +30,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                 </div>
                 <div>
                     <div class="uk-card-body">
-                        <h3 class="uk-card-title">Заявка на расчет стоимости</h3>
+                        <h3 class="uk-card-title"><?= GetMessage('Заявка на расчет стоимости') ?></h3>
                         <div class="roboto_font uk-margin">
                             <?=$arParams["OK_TEXT"];?>
                         </div>
@@ -64,26 +64,26 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                     <?=bitrix_sessid_post()?>
                     <div class="index-section-7__form-input">
                         <label for="user_name">
-                            <span><?=GetMessage("MFT_NAME")?></span>
+                            <span><?=GetMessage("Ваше имя")?></span>
                             <input required type="text" name="user_name" value="<?=$arResult["AUTHOR_NAME"]?>"/>
                         </label>
                         <label for="user_phone">
-                            <span><?=GetMessage("MFT_PHONE")?></span>
+                            <span><?=GetMessage("Номер телефона")?></span>
                             <input required type="text" name="user_phone" value="<?=$arResult["AUTHOR_PHONE"]?>"/>
                         </label>
                         <label for="user_msg">
-                            <span><?=GetMessage("MFT_EMAIL")?></span>
+                            <span><?=GetMessage("Ваш e-mail")?></span>
                             <input required type="text" name="user_email" value="<?=$arResult["AUTHOR_EMAIL"]?>"/>
                         </label>
                     </div>
                     <div class="index-section-7__form-privacy">
-                        <input required type="checkbox" checked> Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="/privacy/">политикой конфиденциальности</a>
+                        <input required type="checkbox" checked> <?= GetMessage('Согласие с политикой') ?>
                     </div>
                     <div class="index-section-7__form-button mt-4">
                         <input type="hidden" name="recaptcha_response">
                         <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
                         <input type="hidden" name="referer_query" value="<?= htmlentities(print_r($_SERVER['HTTP_REFERER'] ?? '', true)) ?>">
-                        <input title="Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности." <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> type="submit" name="submit" value="Получить подборку" class="red-button form-button"/>
+                        <input title="<?= GetMessage('Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности.') ?>" <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> type="submit" name="submit" value="<?= GetMessage('Получить подборку') ?>" class="red-button form-button"/>
                     </div>
                 </form>
             </div>

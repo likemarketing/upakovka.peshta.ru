@@ -46,7 +46,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 ?>
 <header class="page-header">
         <h1 class="page-header__h1 h1">
-            <?if($APPLICATION->GetCurPage()=="/blog/"):?>Блог о&nbsp;полиграфии и&nbsp;бизнесе<?endif;?>
+            <?if($APPLICATION->GetCurPage() == SITE_DIR . "blog/"):?><?= GetMessage('Блог о полиграфии и бизнесе') ?><?endif;?>
             <?foreach ($arResult['SECTIONS'] as &$arSection){
                 if($APPLICATION->GetCurPage()==$arSection['SECTION_PAGE_URL']){
                     print $arSection["DESCRIPTION"];
@@ -59,7 +59,7 @@ if (0 < $arResult["SECTIONS_COUNT"])
 ?>
 <ul class="page-header__categories categories">
     <li class="categories__item <?if($APPLICATION->GetCurPage()=="/blog/"):?>categories__item--active<?endif;?>">
-        <a href="/blog/" class="categories__link">Все рубрики</a>
+        <a href="<?= SITE_DIR ?>blog/" class="categories__link"><?= GetMessage('Все рубрики') ?></a>
     </li>
     <?foreach ($arResult['SECTIONS'] as &$arSection)
     {

@@ -1,0 +1,130 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Владельцам бренда", 
+		"/eng/iml-for-brand/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Кейсы", 
+		"/eng/cases/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Полезные материалы", 
+		"/eng/material/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Блог", 
+		"/eng/blog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О компании", 
+		"/eng/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/eng/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Круговая этикетка", 
+		"/eng/krugovaya-etiketka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Гибкая упаковка", 
+		"/eng/gibkaya-upakovka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Data-Matrix Code", 
+		"/eng/data-matrix-code/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"SMART-Упаковка", 
+		"/eng/smart-upakovka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Изготовителям тары", 
+		"/eng/iml-for-tare/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Тубный ламинат", 
+		"/eng/laminat/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отрасли", 
+		"/eng/industries/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Оборудование", 
+		"/eng/oborudovanie/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Клиенты", 
+		"/eng/clients/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+	    "Самоклеющаяся этикетка",
+        "/eng/samokleyashchayasya-etiketka/",
+        Array(),
+        Array(),
+        ""
+    ),
+	Array(
+		"Стандарты 5S", 
+		"/eng/5s-standarts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Стандарты BRC", 
+		"/eng/brc-standarts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

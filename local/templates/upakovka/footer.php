@@ -3,7 +3,7 @@
         <div uk-grid>
             <div class="uk-width-1-5@s">
                 <div>
-                    <a href="/">
+                    <a href="<?= SITE_DIR ?>">
                         <svg width="161" height="28" viewBox="0 0 161 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
                                 <path d="M4.00005 27.7H1.10005C0.50005 27.7 0.300049 27.6 0.300049 26.9V2.69998C0.300049 1.89998 0.80005 0.599976 2.50005 0.599976H21.1C22.8 0.599976 23.3 1.89998 23.3 2.69998V27C23.3 27.7 23.1 27.8 22.5 27.8H19.7001C19.1 27.8 18.9001 27.7 18.9001 27V4.49998H4.80005V27C4.80005 27.6 4.60005 27.7 4.00005 27.7Z" fill="#FA3F3F"/>
@@ -22,32 +22,32 @@
                     </a>
                 </div>
                 <div class="uk-margin">
-                    <div class="color_fff">г. Ижевск, ул. Кирова, 113</div>
-                    <div class="uk-text-muted">ПН – ПТ с 09:00 до 20:00 </div>
+                    <div class="color_fff"><?= GetMessage('г. Ижевск, ул. Кирова, 113') ?></div>
+                    <div class="uk-text-muted"><?= GetMessage('ПН – ПТ с 09:00 до 20:00') ?> </div>
                 </div>
                 <div class="color_fff fs-18">+7 (922) 683-48-83</div>
-                <div><a href="" class="uk-text-primary" uk-toggle="target: #callback-modal">Заказать звонок</a></div>
+                <div><a href="" class="uk-text-primary" uk-toggle="target: #callback-modal"><?= GetMessage('Заказать звонок') ?></a></div>
             </div>
             <div class="uk-width-1-6@s uk-text-uppercase uk-light uk-text-bold">
                 <ul class="uk-list">
-                    <li><a href="/iml-for-brand/">IML для владельцев бренда</a></li>
-                    <li><a href="/iml-for-tare/">Производителям тары</a></li>
-                    <li><a href="/laminat/">Тубный ламинат</a></li>
-                    <li><a href="/krugovaya-etiketka/">Круговая этикетка</a></li>
-                    <li><a href="/samokleyashchayasya-etiketka/">Самоклеющаяся этикетка</a></li>
-                    <li><a href="/gibkaya-upakovka/">Гибкая упаковка</a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/iml-for-brand/"><?= GetMessage('IML для владельцев бренда') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/iml-for-tare/"><?= GetMessage('Производителям тары') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/laminat/"><?= GetMessage('Тубный ламинат') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/krugovaya-etiketka/"><?= GetMessage('Круговая этикетка') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/samokleyashchayasya-etiketka/"><?= GetMessage('Самоклеющаяся этикетка') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/gibkaya-upakovka/"><?= GetMessage('Гибкая упаковка') ?></a></li>
                 </ul>
             </div>
             <div class="uk-width-1-6@s uk-text-uppercase uk-light uk-text-bold">
                 <ul class="uk-list">
-                    <li><a href="/data-matrix-code/">Data Matrix Code</a></li>
-                    <li><a href="/smart-upakovka/">Смарт упаковка</a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/data-matrix-code/"><?= GetMessage('Data-Matrix Code') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/smart-upakovka/"><?= GetMessage('Смарт упаковка') ?></a></li>
                 </ul>
             </div>
             <div class="uk-width-1-6@s uk-text-uppercase uk-light uk-text-bold">
                 <ul class="uk-list">
-                    <li><a href="/privacy/">Политика конфиденциальности</a></li>
-                    <li><a href="/sitemap.php">Карта сайта</a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/privacy/"><?= GetMessage('Политика конфиденциальности') ?></a></li>
+                    <li><a href="<?= SITE_DIR ?>eng/sitemap.php"><?= GetMessage('Карта сайта') ?></a></li>
                 </ul>
             </div>
             <div class="uk-width-1-4@s uk-text-right@s">
@@ -83,7 +83,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="color_fff uk-margin">Следите за нами</div>
+                <div class="color_fff uk-margin"><?= GetMessage('Следите за нами') ?></div>
                 <div class="uk-visible@s"><a href="mailto:upakovka@peshta.ru" class="uk-text-primary">upakovka@peshta.ru</a></div>
             </div>
         </div>
@@ -108,7 +108,7 @@
 		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
 		"CACHE_TYPE" => "N",	// Тип кеширования
 		"CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
-		"DESC_TEXT" => "Подзаголовок",	// Подзаголовок
+		"DESC_TEXT" => GetMessage('Подзаголовок'),	// Подзаголовок
 		"DETAIL_URL" => "",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
 		"DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
 		"DISPLAY_DATE" => "N",	// Выводить дату элемента
@@ -134,7 +134,7 @@
 		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
 		"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
 		"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
-		"PAGER_TITLE" => "Новости",	// Название категорий
+		"PAGER_TITLE" => GetMessage('Новости'),	// Название категорий
 		"PARENT_SECTION" => "",	// ID раздела
 		"PARENT_SECTION_CODE" => "",	// Код раздела
 		"PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
@@ -157,7 +157,7 @@
 		"SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
 		"SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
 		"STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
-		"TITLE_TEXT" => "Заголовок",	// Заголовок
+		"TITLE_TEXT" => GetMessage('Заголовок'),	// Заголовок
 	),
 	false
 );?>
@@ -165,14 +165,14 @@
 	"FROM" => "upakovka.peshta.ru",
 		"FROM_FIELD_ID" => "UF_CRM_1614519609",
 		"USERTYPE_FIELD_ID" => "UF_CRM_1614519142",
-		"DEAL_TITLE" => "Заявка на тест или пробный заказ (Модальное окно)",
-        "FORM" => "Заявка на расчет",
+		"DEAL_TITLE" => GetMessage('Заявка на тест или пробный заказ (Модальное окно)'),
+        "FORM" => GetMessage('Заявка на расчет'),
 		"CATEGORY_ID" => "26",
 		"ASSIGNED_BY_ID" => "18",
 		"STAGE_ID" => "C26:NEW",
 		"USERTYPE_FIELD_LIST_ID" => "",
 		"USE_CAPTCHA" => "N",
-		"OK_TEXT" => "Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.",	// Сообщение, выводимое пользователю после отправки
+		"OK_TEXT" => GetMessage('Заявка на обратный звонок успешно отправлена. Ожидайте звонка наших менеджеров.'),	// Сообщение, выводимое пользователю после отправки
 		"EMAIL_TO" => "",	// E-mail, на который будет отправлено письмо
 		"REQUIRED_FIELDS" => array(	// Обязательные поля для заполнения
 			0 => "NAME",

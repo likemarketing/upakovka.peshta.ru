@@ -58,7 +58,7 @@ $arLink['NEXT'] = isset($arNavi[$iCurPos+1]) ? $arNavi[$iCurPos+1] : '';
                 </div>
                 <div class="d-flex categories__item">
 
-                    <a href="/blog/<?$section = CIBlockSection::GetByID($arResult["IBLOCK_SECTION_ID"]);
+                    <a href="<?= SITE_DIR ?>blog/<?$section = CIBlockSection::GetByID($arResult["IBLOCK_SECTION_ID"]);
                     if($arSection = $section->GetNext()){
                         echo $arSection['CODE'];
                     }?>/" class="categories__link">
@@ -87,7 +87,7 @@ $arLink['NEXT'] = isset($arNavi[$iCurPos+1]) ? $arNavi[$iCurPos+1] : '';
                     // Если есть предыдущий элемент то выводим ссылку
                     if (is_array($arLink['PREVIOUS']))
                     {
-                        echo '<a href="/blog/'.$secCode.'/'.$arLink["PREVIOUS"]["CODE"].'/">Предыдущая статья</a>';
+                        echo '<a href="' . SITE_DIR . 'blog/'.$secCode.'/'.$arLink["PREVIOUS"]["CODE"].'/">Предыдущая статья</a>';
                     }?>
                 </div>
                 <div class="col-6 col-md-4">
@@ -98,7 +98,7 @@ $arLink['NEXT'] = isset($arNavi[$iCurPos+1]) ? $arNavi[$iCurPos+1] : '';
                     // Если есть следущий элемент то выводим ссылку
                     if (is_array($arLink['NEXT']))
                     {
-                        echo '<a href="/blog/'.$secCode.'/'.$arLink['NEXT']['CODE'].'/">Следующая статья</a>';
+                        echo '<a href="' . SITE_DIR . 'blog/'.$secCode.'/'.$arLink['NEXT']['CODE'].'/">Следующая статья</a>';
                     }?>
                 </div>
             </div>

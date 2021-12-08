@@ -14,7 +14,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 {?>
     <script type="text/javascript">
         $(document).ready(function() {
-            toastr.error('Что-то пошло не так... Попробуйте еще раз!', 'УПС!...');
+            toastr.error('<?= GetMessage('Что-то пошло не так... Попробуйте еще раз!') ?>', '<?= GetMessage('УПС!...') ?>');
         });
     </script>
 <?}
@@ -25,13 +25,13 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Спасибо за вашу заявку!</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel"><?= GetMessage('Спасибо за вашу заявку!') ?></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-content-body d-flex justify-content-center align-items-center mt-4 mb-4">
-                    Мы свяжемся с вами в течение 30 минут
+                    <?= GetMessage('Мы свяжемся с вами в течение 30 минут') ?>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
         <div class="row align-items-center">
             <div class="index-section-7__text col-md-6">
                 <div class="index-section-7__title">
-                    <span>Мы на связи</span>
+                    <span><?= GetMessage('Мы на связи') ?></span>
                     <?=$arParams["TITLE_TEXT"]?>
                 </div>
             </div>
@@ -58,26 +58,26 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
                     <?=bitrix_sessid_post()?>
                     <div class="index-section-7__form-input">
                         <label for="user_name">
-                            <span>Ваше имя *</span>
+                            <span><?= GetMessage('Ваше имя') ?> *</span>
                             <input required type="text" name="user_name" value="<?=$arResult["AUTHOR_NAME"]?>"/>
                         </label>
                         <label for="user_phone">
-                            <span>Номер телефона *</span>
+                            <span><?= GetMessage('Номер телефона') ?> *</span>
                             <input required type="text" name="user_phone" value="<?=$arResult["AUTHOR_PHONE"]?>"/>
                         </label>
                         <label for="user_msg">
-                            <span>Дополнительные пожелания</span>
+                            <span><?= GetMessage('Дополнительные пожелания') ?></span>
                             <input type="text" name="user_msg" value=""/>
                         </label>
                     </div>
                     <div class="index-section-7__form-privacy">
-                        <input required type="checkbox" checked> Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a href="/privacy/">политикой конфиденциальности</a>
+                        <input required type="checkbox" checked> <?= GetMessage('Согласие с политикой') ?>
                     </div>
                     <div class="index-section-7__form-button mt-4">
                         <input type="hidden" name="recaptcha_response" id="recaptchaResponse-settlement-index">
                         <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
                         <input type="hidden" name="referer_query" value="<?= htmlentities(print_r($_SERVER['HTTP_REFERER'] ?? '', true)) ?>">
-                        <input title="Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности." <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> type="submit" name="submit" value="Получить подборку" class="red-button form-button"/>
+                        <input title="<?= GetMessage('Нажимая на кнопку вы соглашаетесь с политикой конфиденциальности.') ?>" <?if(strlen($arResult["OK_MESSAGE"]) > 0 || isset($_GET['success'])):?>disabled<?endif;?> type="submit" name="submit" value="<?= GetMessage('Получить подборку') ?>" class="red-button form-button"/>
                     </div>
                 </form>
             </div>

@@ -25,15 +25,14 @@ $this->setFrameMode(true);
                     </div>
                     <div class="slide-button mt-5">
                         <a href="#feedbacksection" uk-scroll>
-                            Оставить заявку
+                            <?= GetMessage('Оставить заявку') ?>
                         </a>
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="slide-img">
                         <div class="slide-img__text d-flex justify-content-center align-items-center">
-                            Первыми<br/>освоили<br/>технологию IML в россии.<br/><br/>
-                            имеем самый большой опыт.
+                            <?= GetMessage('Первыми освоили технологию IML в россии. имеем самый большой опыт.') ?>
                         </div>
                         <img src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" alt="<?=$arResult["NAME"]?>"/>
                     </div>

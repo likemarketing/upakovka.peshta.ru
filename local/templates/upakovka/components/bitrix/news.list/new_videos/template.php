@@ -39,7 +39,7 @@ $this->setFrameMode(true);
 </div>
 <div class="row load_more_video">
     <div class="col-sm-4 offset-sm-4">
-        <a href="https://www.youtube.com/channel/UCkp1UxVP8A5MX9Gdj2ubUyA" target="_blank" class="btn btn--outline-white">Показать больше</a>
+        <a href="https://www.youtube.com/channel/UCkp1UxVP8A5MX9Gdj2ubUyA" target="_blank" class="btn btn--outline-white"><?= GetMessage('Показать больше') ?></a>
     </div>
 </div>
 <!--<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>

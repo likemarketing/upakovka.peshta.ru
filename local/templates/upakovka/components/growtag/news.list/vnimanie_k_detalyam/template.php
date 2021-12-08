@@ -29,7 +29,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
         </p>
     </div>
     <div class="execution-stages__right">
-        <div class="fs-18">РЕЗУЛЬТАТ</div>
+        <div class="fs-18"><?= GetMessage('РЕЗУЛЬТАТ') ?></div>
         <p class="roboto_font">
             <?=$arItem["PROPERTIES"]["RESULT"]["VALUE"]["TEXT"]?>
         </p>

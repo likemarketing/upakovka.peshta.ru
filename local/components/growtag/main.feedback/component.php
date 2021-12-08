@@ -83,7 +83,7 @@ if (!function_exists('getUTMParamsFromRequest')) {
 
             $rows = '';
             foreach ($params as $key => $value) {
-                $rows .= $key . ': ' . htmlspecialchars($value);
+                $rows .= $key . ': ' . htmlspecialchars($value) . "\n";
             }
 
             $out .= $sectionname . ':' . "\n" . $rows . "\n\n";

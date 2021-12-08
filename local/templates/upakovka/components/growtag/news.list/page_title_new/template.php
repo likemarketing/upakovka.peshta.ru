@@ -26,7 +26,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
                     <?echo $arItem["PREVIEW_TEXT"];?>
                 </p>
                 <div class="uk-display-inline-block">
-                    <a href="" class="red-button" uk-toggle="target: #callback-modal" aria-expanded="false">Заказать</a>
+                    <a href="" class="red-button" uk-toggle="target: #callback-modal" aria-expanded="false"><?= GetMessage('Заказать') ?></a>
                 </div>
             </div>
             <div class="wn-banner__img uk-width-1-2@s"><img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?echo $arItem["NAME"]?>"></div>

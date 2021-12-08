@@ -29,11 +29,11 @@ $this->setFrameMode(true);?>
                         $component, array("HIDE_ICONS" => "Y")
                     );?>
                     <?else:?>
-                    <input name="q" class="search-form__input" type="text" placeholder="Как сделать визитки?">
+                    <input name="q" class="search-form__input" type="text" placeholder="<?= GetMessage('Как сделать визитки?') ?>">
                     <?endif;?>
                 </div>
                 <div class="col-3 col-sm-2">
-                    <input name="s" type="submit" value="Найти" class="search-form__button"/>
+                    <input name="s" type="submit" value="<?= GetMessage('Найти') ?>" class="search-form__button"/>
                 </div>
             </div>
         </div>
