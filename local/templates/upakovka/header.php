@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="yandex-verification" content="1bfb630fd0490649" />
     <meta name="yandex-verification" content="c951c25d8653adb2" />
+    <meta name="yandex-verification" content="b045451d9992e167" />
+    <meta name="google-site-verification" content="a2G1ow_OFiggjXZIeG4hTjB0PI6IuolRQGBx9brxup8" />
     <meta name="cmsmagazine" content="9f729baf893c0e1cea9ce49005885600">
     <meta property="og:title" content="<?$APPLICATION->ShowTitle();?>"/>
     <meta property="og:url" content="<?=$APPLICATION->GetCurDir()?>"/>
