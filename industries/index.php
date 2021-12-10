@@ -161,8 +161,6 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
 	"growtag:main.feedback",
 	"peshta_feedback_footer_NEW1",
 	Array(
-		"19" => ,
-		"20" => fals,
 		"ASSIGNED_BY_ID" => "18",
 		"CATEGORY_ID" => "26",
 		"COMPONENT_TEMPLATE" => "peshta_feedback_index",
