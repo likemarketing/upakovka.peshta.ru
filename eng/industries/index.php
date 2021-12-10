@@ -1,17 +1,17 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", GetMessage('Мы печатаем полиграфию в Ижевске. Оперативная поддержка яркими промо-материалами для роста бизнеса.'));
-$APPLICATION->SetPageProperty("keywords", GetMessage('типография, ижевск, визитки, фирменный стиль, заказать визитки, упаковка, печать, штампы, буклеты, полиграфия, нумераторы, полиграфия для бизнеса'));
-$APPLICATION->SetPageProperty("title", GetMessage('ПЕШТА - Индивидуальные решения для вашего бизнеса'));
-$APPLICATION->SetTitle(GetMessage('Индивидуальные решения для вашего бизнеса'));
+$APPLICATION->SetPageProperty("description", GetMessage('We print polygraphy in Izhevsk. Operational support with bright promotional materials for business growth.'));
+$APPLICATION->SetPageProperty("keywords", GetMessage('printing house, izhevsk, business cards, corporate identity, order business cards, packaging, printing, stamps, booklets, printing, numerators, printing for business'));
+$APPLICATION->SetPageProperty("title", GetMessage('Peshta - Customized solutions for your business'));
+$APPLICATION->SetTitle(GetMessage('Customized solutions for your business'));
 $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APPLICATION->GetCurPage());
 ?><div class="wn-banner">
 	<div class="uk-container uk-container-large uk-height-1-1">
 		<div class="uk-height-1-1" uk-grid="">
 			<div class="wn-banner__text uk-width-1-2@s">
-				<h2>Индивидуальные решения для вашего бизнеса</h2>
+				<h2>Customized solutions for your business</h2>
 				<div class="uk-display-inline-block">
- <a href="" class="red-button" uk-toggle="target: #callback-modal" aria-expanded="false">Заказать</a>
+ <a href="" class="red-button" uk-toggle="target: #callback-modal" aria-expanded="false"><?= GetMessage('Заказать') ?></a>
 				</div>
 			</div>
 			<!-- <div class="wn-banner__img uk-width-1-2@s">
@@ -23,7 +23,7 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
 <div class="uk-container uk-container-large">
 	<div class="uk-section">
 		<p class="uk-margin-large-bottom">
-			Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений.
+			<?php /*Таким образом рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений.*/ ?>
 		</p>
 		<div class="uk-child-width-1-3@m" uk-grid="">
 			 <?$APPLICATION->IncludeComponent(
@@ -91,7 +91,7 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
 <div class="bg_gray_dark uk-section">
 	<div class="uk-container uk-container-large">
 		<div>
-			<h2 class="uk-text-center uk-margin-medium-bottom">С нами уже сотрудничают</h2>
+			<h2 class="uk-text-center uk-margin-medium-bottom">Our partners</h2>
 		</div>
 		 <?$APPLICATION->IncludeComponent(
 	"growtag:news.list",
@@ -120,7 +120,7 @@ $APPLICATION->SetPageProperty('canonical', "https://".$_SERVER['HTTP_HOST'].$APP
 		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "17",
+		"IBLOCK_ID" => "88",
 		"IBLOCK_TYPE" => "newpeshta",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
