@@ -26,7 +26,7 @@ $this->setFrameMode(true);
             </div>
             <?echo $arItem["PREVIEW_TEXT"];?>
             <div class="uk-text-center">
-                <a href="" class="red-button red-button_short" uk-toggle="target: #callback-modal" aria-expanded="false">Заказать</a>
+                <a href="" class="red-button red-button_short" uk-toggle="target: #callback-modal" aria-expanded="false"><?= GetMessage('Заказать') ?></a>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@ $this->setFrameMode(true);
                 </div>
                 <?echo $arItem["PREVIEW_TEXT"];?>
                 <div>
-                    <a href="" class="red-button" uk-toggle="target: #callback-modal" aria-expanded="false">Заказать</a>
+                    <a href="" class="red-button" uk-toggle="target: #callback-modal" aria-expanded="false"><?= GetMessage('Заказать') ?></a>
                 </div>
             </div>
         </li>

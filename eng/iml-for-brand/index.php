@@ -134,7 +134,7 @@ $APPLICATION->SetTitle("Peshta");
         <div class="row justify-content-center">
             <div class="index-section-3__title">
                 <h2>
-                    What is <span>ML?<span>
+                    What is <span>IML?<span>
                 </h2>
             </div>
         </div>
