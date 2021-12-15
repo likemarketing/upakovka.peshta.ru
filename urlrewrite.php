@@ -8,14 +8,6 @@ $arUrlRewrite=array (
     'PATH' => '/eng/blog/detail.php',
     'SORT' => 100,
   ),
-  8 => 
-  array (
-    'CONDITION' => '#^/eng/blog/([^\\/]+)/($|\\?.*)#',
-    'RULE' => 'ID=$1',
-    'ID' => '',
-    'PATH' => '/eng/blog/section.php',
-    'SORT' => 100,
-  ),
   9 => 
   array (
     'CONDITION' => '#^/eng/industries/([^\\/]+)/($|\\?.*)#',
@@ -38,6 +30,14 @@ $arUrlRewrite=array (
     'RULE' => 'CODE=$1',
     'ID' => '',
     'PATH' => '/industries/detail.php',
+    'SORT' => 100,
+  ),
+  8 => 
+  array (
+    'CONDITION' => '#^/eng/blog/([^\\/]+)/($|\\?.*)#',
+    'RULE' => 'ID=$1',
+    'ID' => '',
+    'PATH' => '/eng/blog/section.php',
     'SORT' => 100,
   ),
   3 => 
