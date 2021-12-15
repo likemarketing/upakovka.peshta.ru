@@ -147,14 +147,14 @@ $APPLICATION->SetTitle(GetMessage('Тубный ламинат'));
                 "AREA_FILE_SHOW" => "file",
                 "AREA_FILE_SUFFIX" => "inc",
                 "EDIT_TEMPLATE" => "standard.php",
-                "PATH" => "/laminat/red-block-text.php"
+                "PATH" => SITE_DIR . "laminat/red-block-text.php"
             )
         );?>
     </div>
 </div>
 <div class="uk-container uk-container-large">
     <div class="uk-section">
-        <h2 class="uk-text-center uk-margin-medium-bottom">Выгоды тубного ламината у Пешты</h2>
+        <h2 class="uk-text-center uk-margin-medium-bottom">Pros of our tube laminate</h2>
         <?$APPLICATION->IncludeComponent("growtag:news.list", "vygody_laminata", Array(
 	"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",

@@ -141,3 +141,4 @@ $MESS['INDUSTRY_OFFER_IBLOCK_ID'] = '51';
 $MESS['INDUSTRY_BLOG_IBLOCK_ID'] = '52';
 $MESS['INDUSTRY_BUZZ_IBLOCK_ID'] = '47';
 $MESS['Ваш телефон'] = 'Ваш телефон';
+$MESS['РУС'] = 'РУС';

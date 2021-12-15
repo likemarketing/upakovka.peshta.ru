@@ -310,7 +310,22 @@
             <div class="padding_remove_mobile_left">
                 <button class="red-button red-button_small " uk-toggle="target: #callback-modal"><?= GetMessage('Заявка на расчет') ?></button>
             </div>
+
+            <div class="boundary lang-selector">
+                <?php if (SITE_DIR == '/eng/'): ?>
+                    <button type="button">ENG</button>
+                    <div uk-dropdown="mode: click">
+                        <a href="<?= htmlentities(preg_replace('/^\/eng/', '', $_SERVER['REQUEST_URI'])) ?>"><?= GetMessage('РУС') ?></a>
+                    </div>
+                <?php else: ?>
+                    <button type="button"><?= GetMessage('РУС') ?></button>
+                    <div uk-dropdown="mode: click">
+                        <a href="/eng<?= $_SERVER['REQUEST_URI'] ?>">ENG</a>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
+
         <hr class="uk-visible@m">
         <div class="uk-visible@m">
             <nav class="uk-navbar-container uk-navbar-transparent uk-width-5-6" uk-navbar>
