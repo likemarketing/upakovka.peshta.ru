@@ -43,6 +43,10 @@ if(strlen($arResult["OK_MESSAGE"]) > 0)
     <script type="text/javascript">
         $(document).ready(function() {
             UIkit.modal(document.getElementById('modalCallbackOk')).show();
+
+            $(window).on('load', function() {
+                reachGoal('form:order');
+            });
         });
     </script>
     <?
