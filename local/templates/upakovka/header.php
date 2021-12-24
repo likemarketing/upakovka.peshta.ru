@@ -219,8 +219,9 @@
             </nav>
             <div class="uk-flex">
                 <div class="padding_remove_mobile_left">
-                    <a href="<?= SITE_DIR ?>">
-                        <svg class="uk-visible@m" width="161" height="28" viewBox="0 0 161 28" fill="none"
+                    <a href="<?= SITE_DIR ?>" class="header-logo header-logo-ny">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo_ny.png" alt="" style="margin-top: -10%;">
+                        <?php /*<svg class="uk-visible@m" width="161" height="28" viewBox="0 0 161 28" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
                                 <path d="M4.00005 27.7001H1.10005C0.50005 27.7001 0.300049 27.6001 0.300049 26.9001V2.7001C0.300049 1.9001 0.80005 0.600098 2.50005 0.600098H21.1C22.8 0.600098 23.3 1.9001 23.3 2.7001V27.0001C23.3 27.7001 23.1 27.8001 22.5 27.8001H19.7001C19.1 27.8001 18.9001 27.7001 18.9001 27.0001V4.5001H4.80005V27.0001C4.80005 27.6001 4.60005 27.7001 4.00005 27.7001Z"
@@ -263,7 +264,7 @@
                                     <rect width="100" height="17" fill="white"/>
                                 </clipPath>
                             </defs>
-                        </svg>
+                        </svg>*/ ?>
                     </a>
                 </div>
                 <div class="fs-12 uk-visible@m uk-margin-left">
